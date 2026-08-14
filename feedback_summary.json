@@ -1,0 +1,61 @@
+{
+  "source": "Open WebUI GitHub Issues",
+  "sourceUrl": "https://github.com/open-webui/open-webui/issues",
+  "accessed": "2026-08-14",
+  "sampleSize": 156,
+  "openCount": 51,
+  "medianTriageScore": 43.0,
+  "themeCounts": [
+    {
+      "name": "模型与API连接",
+      "count": 45
+    },
+    {
+      "name": "其他",
+      "count": 27
+    },
+    {
+      "name": "界面与对话流程",
+      "count": 22
+    },
+    {
+      "name": "知识库与RAG",
+      "count": 21
+    },
+    {
+      "name": "Agent/工具/搜索",
+      "count": 15
+    },
+    {
+      "name": "账号与权限",
+      "count": 10
+    },
+    {
+      "name": "安装与升级",
+      "count": 10
+    },
+    {
+      "name": "多媒体与语音",
+      "count": 3
+    },
+    {
+      "name": "性能与稳定性",
+      "count": 3
+    }
+  ],
+  "typeCounts": [
+    {
+      "name": "问题反馈",
+      "count": 95
+    },
+    {
+      "name": "功能建议",
+      "count": 52
+    },
+    {
+      "name": "咨询/待判定",
+      "count": 9
+    }
+  ],
+  "scoringNote": "Triage Score仅用于演示初筛：由公开评论数、reaction、状态、问题类型与阻塞关键词组合；不等同于真实业务优先级。"
+}

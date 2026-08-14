@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Signal Desk：AI 产品用户反馈洞察与 Triage 初筛工作台。">
+  <title>Signal Desk｜AI 产品用户反馈洞察</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="feedback">
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html"><span class="brand-mark">XQ</span><span>AI Product Ops Portfolio</span></a><nav class="nav"><a href="index.html" data-page="home">首页</a><a href="llm-eval.html" data-page="eval">项目1：模型评测</a><a href="feedback-insight.html" data-page="feedback">项目2：反馈洞察</a><a href="resume.pdf">简历 PDF</a></nav></div></header>
+  <main class="page">
+    <section class="hero">
+      <div><span class="eyebrow">Project 02 · Voice of user</span><h1 class="page-title">Signal Desk：让 156 条分散反馈变成可追溯的产品输入。</h1><p class="hero-lede">以 Open WebUI 公开 GitHub Issues 为真实样本，完成去 PR、隐私最小化、问题分类、主题聚合和 Triage 初筛；支持筛选、查看原页与 CSV 导出。目标是帮助产品运营先找出值得人工深挖的问题簇。</p><div class="hero-actions"><button class="button" id="export-feedback">导出反馈 CSV</button><button class="button secondary" onclick="window.print()">打印洞察报告</button><a class="button ghost" href="https://github.com/open-webui/open-webui/issues" target="_blank" rel="noreferrer">打开数据源 ↗</a></div></div>
+      <aside class="hero-card"><strong>项目性质：个人验证性作品</strong><p>Codex 辅助数据处理、规则实现、前端开发与文档初稿；分类逻辑、数据源和限制均公开。</p><div class="contact-list"><div class="contact-item"><span>样本</span><b>156 条公开 Issue</b></div><div class="contact-item"><span>状态</span><b>51 条开放</b></div><div class="contact-item"><span>主题</span><b>9 类（含“其他”）</b></div><div class="contact-item"><span>数据日期</span><b>2026-08-14 获取</b></div></div></aside>
+    </section>
+
+    <section class="notice"><span class="notice-icon">✓</span><div><strong>隐私最小化</strong><p>项目只保留公开 Issue 标题、状态、时间、标签、评论数、reaction 与原页链接；主动删除用户名和正文，避免把日志中的潜在个人信息带入作品集。</p></div></section>
+
+    <section class="evidence-grid" aria-label="项目快速说明">
+      <article class="evidence-card"><span>产品问题</span><strong>反馈分散难判断</strong><p>先建立可搜索、可回溯的反馈台账，再把问题簇转成待验证的产品假设。</p></article>
+      <article class="evidence-card"><span>已完成</span><strong>数据治理 + MVP</strong><p>156 条公开 Issue、9 类主题、3 类反馈类型，以及筛选、原页回溯和 CSV 导出。</p></article>
+      <article class="evidence-card"><span>尚未完成</span><strong>人工标注评估</strong><p>尚未统计分类准确率，也没有用户规模、业务损失和修复成本，因此只做 Triage 初筛。</p></article>
+    </section>
+
+    <section class="kpi-row"><article class="kpi"><strong id="fb-total">156</strong><span>公开用户问题</span></article><article class="kpi"><strong id="fb-open">51</strong><span>仍处于开放状态</span></article><article class="kpi"><strong id="fb-median">43</strong><span>Triage Score 中位数</span></article><article class="kpi"><strong id="fb-top-theme">45</strong><span>最大主题问题数</span></article></section>
+
+    <section class="panel">
+      <div class="tabs" data-tabs><button class="tab active" data-tab="insight">洞察总览</button><button class="tab" data-tab="inbox">反馈工作台</button><button class="tab" data-tab="priority">初筛看板</button><button class="tab" data-tab="method">方法与边界</button></div>
+
+      <div class="tab-panel" data-tab-panel="insight">
+        <div class="dashboard-grid" style="margin-top:22px">
+          <section><div class="panel-title"><div><h2>主题分布</h2><p>基于标题与公开标签的规则分类</p></div></div><div id="theme-bars" class="bars"></div></section>
+          <aside><div class="panel-title"><div><h2>反馈类型</h2><p>问题反馈 / 功能建议 / 待判定</p></div></div><div id="type-bars" class="bars"></div></aside>
+        </div>
+        <div class="section-head" style="margin-top:34px"><div><h2>三条可执行的产品假设</h2><p>这是“下一步验证什么”，不是在缺少业务数据时直接宣布结论。</p></div></div>
+        <div class="project-grid">
+          <article class="project-card" style="min-height:0"><span class="project-index">HYPOTHESIS 01</span><h3>模型/API 连接需要更强的自检与错误解释</h3><p>样本中最大主题为模型与 API 连接。下一步应按 provider、错误码和配置阶段拆分，并验证“一键连接测试 + 可读错误建议”能否减少重复 Issue。</p><div class="project-footer"><strong>验证指标：同类新增 Issue / 自检完成率</strong></div></article>
+          <article class="project-card alt" style="min-height:0"><span class="project-index">HYPOTHESIS 02</span><h3>RAG 文件链路需要可见进度与可诊断状态</h3><p>知识库与 RAG 形成独立问题簇。可继续细分上传、解析、切片、embedding 和召回；优先补“状态可见”和失败恢复，而不是只加功能。</p><div class="project-footer"><strong>验证指标：任务成功率 / 中断恢复率</strong></div></article>
+        </div>
+        <div class="notice warn" style="margin-top:18px"><span class="notice-icon">!</span><div><strong>分类仍需迭代</strong><p>“其他”类占有明显比例，说明标题规则无法覆盖所有语义。下一轮应人工抽检“其他”样本并拆出新主题，而不是为了图表好看强行归类。</p></div></div>
+      </div>
+
+      <div class="tab-panel" data-tab-panel="inbox" hidden>
+        <div class="toolbar">
+          <div class="field grow"><label for="fb-search">搜索标题 / 标签</label><input id="fb-search" placeholder="例如：RAG、login、model"></div>
+          <div class="field"><label for="fb-theme">主题</label><select id="fb-theme"><option value="">全部</option></select></div>
+          <div class="field"><label for="fb-type">类型</label><select id="fb-type"><option value="">全部</option></select></div>
+          <div class="field"><label for="fb-state">状态</label><select id="fb-state"><option value="">全部</option></select></div>
+          <div class="field"><label for="fb-band">初筛档位</label><select id="fb-band"><option value="">全部</option></select></div>
+        </div>
+        <div class="table-wrap"><table><thead><tr><th>Issue / 日期</th><th>标题</th><th>主题与类型</th><th>互动</th><th>Triage</th><th>证据</th></tr></thead><tbody id="feedback-table"></tbody></table></div><p id="feedback-count" class="small muted" style="margin:12px 0 0"></p>
+      </div>
+
+      <div class="tab-panel" data-tab-panel="priority" hidden>
+        <div class="notice warn" style="margin-top:22px"><span class="notice-icon">!</span><div><strong>Triage Score ≠ 产品优先级</strong><p>分数只组合公开互动、状态、问题/建议类型与少量阻塞关键词。没有用户规模、商业影响、修复成本和战略目标，不能直接排研发资源。</p></div></div>
+        <div class="panel-title" style="margin-top:26px"><div><h2>Top 20 初筛候选</h2><p>为人工复核排序，不做自动决策</p></div></div>
+        <div id="priority-grid" class="case-grid"></div>
+      </div>
+
+      <div class="tab-panel" data-tab-panel="method" hidden>
+        <div class="split-grid" style="margin-top:22px">
+          <section><div class="panel-title"><div><h2>数据处理流程</h2></div></div><div class="steps"><div class="step"><h3>抓取公开 Issues</h3><p>通过 GitHub 公共 API 分页读取，访问日期 2026-08-14。</p></div><div class="step"><h3>删除 PR 与身份字段</h3><p>仅保留 Issue；不收集用户名、正文、日志或评论内容。</p></div><div class="step"><h3>规则分类与初筛</h3><p>以标题和公开标签判断主题/类型，计算可解释的 Triage Score。</p></div><div class="step"><h3>保留源链接与未知项</h3><p>每条记录可回到原页；无法可靠归类时保留“其他/待判定”。</p></div></div></section>
+          <section><div class="panel-title"><div><h2>分析边界</h2></div></div><div class="audit-list"><div class="audit-item"><span class="audit-num">×</span><div><h3>不能代表全部用户</h3><p>GitHub Issue 提交者更偏技术用户，且会受到项目治理方式影响。</p></div></div><div class="audit-item"><span class="audit-num">×</span><div><h3>不能用评论数代替业务损失</h3><p>讨论热度只是信号，不等于受影响用户数、收入或留存。</p></div></div><div class="audit-item"><span class="audit-num">×</span><div><h3>不能把规则分类当作标注真值</h3><p>规则可复核但覆盖有限；生产环境需要人工抽检与版本化评估。</p></div></div></section>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="footer-inner"><span>数据：Open WebUI GitHub Issues，访问于 2026-08-14</span><span><a href="prd-signal-desk.md">查看 PRD</a> · <a href="feedback_issues.json">下载 JSON</a></span></div></footer>
+  <script src="feedback_issues.js"></script><script src="feedback_summary.js"></script><script src="common.js"></script><script src="feedback.js"></script>
+</body>
+</html>

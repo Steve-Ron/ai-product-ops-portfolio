@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-08-14T06:00:56.382534+00:00",
+  "accessDate": "2026-08-14",
+  "arenaRecords": 120,
+  "testCases": 48,
+  "jobSamples": 32,
+  "feedbackIssues": 156,
+  "verification": {
+    "arenaSource": "LMArena公开偏好数据；胜负标签来自人类偏好，根因标签为规则建议、待人工复核。",
+    "testSet": "由 Codex 辅助生成并完成结构校验的产品测试集初稿；当前状态为待执行，候选人投递前需逐条复核，不伪装成已跑模型结果。",
+    "feedbackSource": "Open WebUI公开GitHub Issues；删除PR、用户名和正文，仅保留公开标题及聚合元数据。",
+    "jobSample": "公开招聘页面人工编码；页面会变化，投递前需再次打开源链接核验。"
+  }
+}
