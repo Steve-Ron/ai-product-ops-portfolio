@@ -97,8 +97,8 @@ forbidText('公开内容', allPublicCopy, 'AI 产品运营实习生');
 forbidText('公开内容', allPublicCopy, 'AI 产品运营');
 forbidText('公开内容', allPublicCopy, 'AI Product Ops Portfolio');
 forbidText('公开内容', allPublicCopy, '许强-AI产品运营实习简历.pdf');
+forbidText('公开内容', allPublicCopy, 'resume.pdf');
 requireText('README', readme, 'AI 产品经理实习生');
-if (fs.existsSync(path.join(root, 'resume.pdf'))) errors.push('根目录仍保留过期简历：resume.pdf');
 
 const llm = pages['llm-eval.html'];
 for (const expected of [
