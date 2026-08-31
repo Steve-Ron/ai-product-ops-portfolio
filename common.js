@@ -38,16 +38,49 @@
         </div>`).join("");
     },
     initTabs() {
-      document.querySelectorAll("[data-tabs]").forEach((root) => {
-        root.querySelectorAll("[data-tab]").forEach((button) => {
-          button.addEventListener("click", () => {
-            const id = button.dataset.tab;
-            root.querySelectorAll("[data-tab]").forEach((x) => x.classList.toggle("active", x === button));
-            root.parentElement.querySelectorAll("[data-tab-panel]").forEach((panel) => {
-              panel.hidden = panel.dataset.tabPanel !== id;
-            });
+      document.querySelectorAll("[data-tabs]").forEach((root, groupIndex) => {
+        const buttons = [...root.querySelectorAll("[data-tab]")];
+        const panels = [...root.parentElement.querySelectorAll("[data-tab-panel]")];
+        root.setAttribute("role", "tablist");
+
+        const activate = (button, moveFocus = false) => {
+          const id = button.dataset.tab;
+          buttons.forEach((item) => {
+            const active = item === button;
+            item.classList.toggle("active", active);
+            item.setAttribute("aria-selected", String(active));
+            item.tabIndex = active ? 0 : -1;
+          });
+          panels.forEach((panel) => { panel.hidden = panel.dataset.tabPanel !== id; });
+          if (moveFocus) button.focus();
+        };
+
+        buttons.forEach((button, index) => {
+          const panel = panels.find((item) => item.dataset.tabPanel === button.dataset.tab);
+          const buttonId = `tab-${groupIndex}-${button.dataset.tab}`;
+          const panelId = `panel-${groupIndex}-${button.dataset.tab}`;
+          button.id = buttonId;
+          button.setAttribute("role", "tab");
+          button.setAttribute("aria-controls", panelId);
+          if (panel) {
+            panel.id = panelId;
+            panel.setAttribute("role", "tabpanel");
+            panel.setAttribute("aria-labelledby", buttonId);
+          }
+          button.addEventListener("click", () => activate(button));
+          button.addEventListener("keydown", (event) => {
+            let targetIndex = null;
+            if (event.key === "ArrowRight") targetIndex = (index + 1) % buttons.length;
+            if (event.key === "ArrowLeft") targetIndex = (index - 1 + buttons.length) % buttons.length;
+            if (event.key === "Home") targetIndex = 0;
+            if (event.key === "End") targetIndex = buttons.length - 1;
+            if (targetIndex === null) return;
+            event.preventDefault();
+            activate(buttons[targetIndex], true);
           });
         });
+
+        activate(buttons.find((button) => button.classList.contains("active")) || buttons[0]);
       });
     },
     uniq(values) {
@@ -59,7 +92,10 @@
     App.initTabs();
     const current = document.body.dataset.page;
     document.querySelectorAll(".nav a[data-page]").forEach((link) => {
-      link.classList.toggle("active", link.dataset.page === current);
+      const active = link.dataset.page === current;
+      link.classList.toggle("active", active);
+      if (active) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
     });
   });
 })();

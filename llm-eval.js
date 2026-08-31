@@ -40,9 +40,19 @@ document.addEventListener("DOMContentLoaded", () => {
   fillSelect(language, records.map((x) => x.language));
 
   const drawer = document.querySelector("#badcase-drawer");
-  function closeDrawer() { drawer.classList.remove("open"); drawer.setAttribute("aria-hidden", "true"); }
-  document.querySelector("#drawer-close").addEventListener("click", closeDrawer);
+  const drawerClose = document.querySelector("#drawer-close");
+  let drawerTrigger = null;
+  function closeDrawer() {
+    drawer.classList.remove("open");
+    drawer.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("drawer-open");
+    drawerTrigger?.focus();
+  }
+  drawerClose.addEventListener("click", closeDrawer);
   drawer.addEventListener("click", (event) => { if (event.target === drawer) closeDrawer(); });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && drawer.classList.contains("open")) closeDrawer();
+  });
 
   function openRecord(id) {
     const row = records.find((x) => x.id === id);
@@ -55,6 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="response-card"><h4>模型 B · ${App.escape(row.modelB)}</h4><div class="response-text">${App.escape(row.answerB)}</div></div>
       <div class="notice warn" style="margin-top:16px"><span class="notice-icon">!</span><div><strong>复核提醒</strong><p>胜负标签来自公开偏好；根因并非原数据字段，而是本项目的规则建议。人工复核时应记录具体证据句。</p></div></div>`;
     drawer.classList.add("open"); drawer.setAttribute("aria-hidden", "false");
+    document.body.classList.add("drawer-open");
+    drawerTrigger = document.activeElement;
+    drawerClose.focus();
   }
 
   function renderBadCases() {

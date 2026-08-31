@@ -2,29 +2,61 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Signal Desk：AI 产品用户反馈洞察与 Triage 初筛工作台。">
-  <title>Signal Desk｜AI 产品用户反馈洞察</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Signal Desk：许强设计的 AI 产品用户反馈聚类与需求初筛工作台，包含 156 条公开反馈、9 类主题和可追溯的人工复核队列。">
+  <link rel="canonical" href="https://steve-ron.github.io/ai-product-ops-portfolio/feedback-insight.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://steve-ron.github.io/ai-product-ops-portfolio/feedback-insight.html">
+  <meta property="og:title" content="Signal Desk｜AI 产品用户反馈洞察案例">
+  <meta property="og:description" content="从 156 条分散 Issue 到可追溯产品输入：数据治理、问题聚类、产品假设与人工复核。">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Signal Desk｜AI 产品用户反馈洞察案例">
+  <meta name="twitter:description" content="156 条公开反馈、9 类主题、3 类反馈类型，以及真实的决策边界。">
+  <title>Signal Desk｜AI 产品用户反馈洞察案例｜许强</title>
+  <link rel="stylesheet" href="style.css?v=20260831d">
 </head>
 <body data-page="feedback">
-<header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html"><span class="brand-mark">XQ</span><span>AI Product Ops Portfolio</span></a><nav class="nav"><a href="index.html" data-page="home">首页</a><a href="llm-eval.html" data-page="eval">项目1：模型评测</a><a href="feedback-insight.html" data-page="feedback">项目2：反馈洞察</a><a href="resume.pdf">简历 PDF</a></nav></div></header>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html" aria-label="许强 AI 产品经理作品集首页"><span class="brand-mark">XQ</span><span>AI Product Manager Portfolio</span></a><nav class="nav" aria-label="主导航"><a href="index.html" data-page="home">作品集</a><a href="llm-eval.html" data-page="eval">LLM Lens</a><a href="feedback-insight.html" data-page="feedback">Signal Desk</a><a class="nav-cta" href="downloads/许强-北京理工大学-AI产品经理实习生.pdf">下载简历</a></nav></div></header>
   <main class="page">
-    <section class="hero">
-      <div><span class="eyebrow">Project 02 · Voice of user</span><h1 class="page-title">Signal Desk：让 156 条分散反馈变成可追溯的产品输入。</h1><p class="hero-lede">以 Open WebUI 公开 GitHub Issues 为真实样本，完成去 PR、隐私最小化、问题分类、主题聚合和 Triage 初筛；支持筛选、查看原页与 CSV 导出。目标是帮助产品运营先找出值得人工深挖的问题簇。</p><div class="hero-actions"><button class="button" id="export-feedback">导出反馈 CSV</button><button class="button secondary" onclick="window.print()">打印洞察报告</button><a class="button ghost" href="https://github.com/open-webui/open-webui/issues" target="_blank" rel="noreferrer">打开数据源 ↗</a></div></div>
-      <aside class="hero-card"><strong>项目性质：个人验证性作品</strong><p>Codex 辅助数据处理、规则实现、前端开发与文档初稿；分类逻辑、数据源和限制均公开。</p><div class="contact-list"><div class="contact-item"><span>样本</span><b>156 条公开 Issue</b></div><div class="contact-item"><span>状态</span><b>51 条开放</b></div><div class="contact-item"><span>主题</span><b>9 类（含“其他”）</b></div><div class="contact-item"><span>数据日期</span><b>2026-08-14 获取</b></div></div></aside>
+    <section class="hero case-hero">
+      <div><span class="eyebrow">Project 02 · Voice of user</span><h1 class="page-title">Signal Desk：让 156 条分散反馈变成可追溯的产品输入。</h1><p class="hero-lede">面向需要从用户声音中识别问题簇、形成验证假设的 AI 产品团队，将公开 Issue 清洗为可搜索、可回溯、可人工复核的需求初筛工作台。</p><div class="hero-actions"><a class="button" href="#workbench">体验反馈工作台 ↓</a><button class="button secondary" id="export-feedback">导出反馈 CSV</button><a class="button ghost" href="https://github.com/open-webui/open-webui/issues" target="_blank" rel="noreferrer">打开数据源 ↗</a></div></div>
+      <aside class="hero-card case-facts"><span class="status-pill"><span aria-hidden="true"></span>个人产品项目</span><strong>产品负责人 · AI 辅助实现</strong><p>我负责问题定义、分类框架、PRD、交互原型、数据分析和验证设计；使用 AI 辅助前端实现与数据处理。</p><div class="contact-list"><div class="contact-item"><span>资产</span><b>156 条公开用户反馈</b></div><div class="contact-item"><span>结构</span><b>9 类主题 · 3 类反馈类型</b></div><div class="contact-item"><span>状态</span><b>MVP 完成 · 分类待抽检</b></div><div class="contact-item"><span>文档</span><a href="prd-signal-desk.md">查看 PRD ↗</a></div></div></aside>
     </section>
 
-    <section class="notice"><span class="notice-icon">✓</span><div><strong>隐私最小化</strong><p>项目只保留公开 Issue 标题、状态、时间、标签、评论数、reaction 与原页链接；主动删除用户名和正文，避免把日志中的潜在个人信息带入作品集。</p></div></section>
+    <section class="case-summary" aria-labelledby="recruiter-summary">
+      <div class="section-head compact"><div><span class="eyebrow">Case at a glance</span><h2 id="recruiter-summary">招聘官摘要</h2></div><p>从原始用户声音到产品假设，重点看问题结构化与决策边界。</p></div>
+      <div class="case-summary-grid">
+        <article><span>目标用户</span><h3>AI 产品经理与用户反馈协作角色</h3><p>需要从分散反馈中快速定位问题簇，并建立可回溯的人工复核队列。</p></article>
+        <article><span>产品问题</span><h3>反馈分散，热度难转化为决策</h3><p>Issue 结构不一、主题混杂；评论数能反映讨论，但不能直接说明业务影响。</p></article>
+        <article><span>我的角色</span><h3>产品负责人（AI 辅助实现）</h3><p>完成数据范围、隐私策略、分类体系、Triage 规则、PRD、MVP 与产品假设。</p></article>
+        <article><span>项目状态</span><h3>可交互 MVP，分类准确性待评估</h3><p>工作台与源链接已完成；规则分类尚未经过成规模人工标注，不冒充真值。</p></article>
+      </div>
+    </section>
+
+    <section class="section decision-section">
+      <div class="section-head compact"><div><span class="eyebrow">Product decisions</span><h2>关键产品判断</h2></div><p>重点不是把所有反馈自动打分，而是让每一步都能回到原始证据。</p></div>
+      <div class="decision-grid">
+        <article><span>01</span><h3>先做隐私最小化，再进入分析</h3><p>删除用户名、正文、日志和评论内容，只保留完成主题聚类与源页回溯所需的公开字段。</p></article>
+        <article><span>02</span><h3>保留“其他”和“待判定”</h3><p>标题规则无法覆盖完整语义；允许未知项比为了图表整齐而强行归类更可信。</p></article>
+        <article><span>03</span><h3>Triage 只用于人工复核队列</h3><p>互动、状态和阻塞关键词不能替代用户规模、商业影响、研发成本与战略优先级。</p></article>
+      </div>
+    </section>
+
+    <section class="delivery-strip" aria-label="已完成交付">
+      <div><span class="eyebrow">Deliverables</span><h2>已完成交付</h2></div>
+      <ul><li>156 条公开用户反馈</li><li>9 类主题与 3 类反馈类型</li><li>可解释 Triage 规则</li><li>反馈工作台 MVP</li><li>PRD、源链接与 CSV 导出</li></ul>
+    </section>
+
+    <section class="notice"><span class="notice-icon">✓</span><div><strong>真实性与隐私边界</strong><p>项目只保留公开 Issue 标题、状态、时间、标签、评论数、reaction 与原页链接；主动删除用户名和正文。分类与 Triage 是可解释初筛，不代表真实业务优先级。</p></div></section>
 
     <section class="evidence-grid" aria-label="项目快速说明">
       <article class="evidence-card"><span>产品问题</span><strong>反馈分散难判断</strong><p>先建立可搜索、可回溯的反馈台账，再把问题簇转成待验证的产品假设。</p></article>
       <article class="evidence-card"><span>已完成</span><strong>数据治理 + MVP</strong><p>156 条公开 Issue、9 类主题、3 类反馈类型，以及筛选、原页回溯和 CSV 导出。</p></article>
-      <article class="evidence-card"><span>尚未完成</span><strong>人工标注评估</strong><p>尚未统计分类准确率，也没有用户规模、业务损失和修复成本，因此只做 Triage 初筛。</p></article>
+      <article class="evidence-card"><span>下一轮验证</span><strong>人工标注抽检</strong><p>抽检“其他/待判定”样本、计算分类一致性，再按 provider 与链路阶段拆分高频问题簇。</p></article>
     </section>
 
     <section class="kpi-row"><article class="kpi"><strong id="fb-total">156</strong><span>公开用户问题</span></article><article class="kpi"><strong id="fb-open">51</strong><span>仍处于开放状态</span></article><article class="kpi"><strong id="fb-median">43</strong><span>Triage Score 中位数</span></article><article class="kpi"><strong id="fb-top-theme">45</strong><span>最大主题问题数</span></article></section>
 
-    <section class="panel">
+    <section class="panel workbench-panel" id="workbench">
       <div class="tabs" data-tabs><button class="tab active" data-tab="insight">洞察总览</button><button class="tab" data-tab="inbox">反馈工作台</button><button class="tab" data-tab="priority">初筛看板</button><button class="tab" data-tab="method">方法与边界</button></div>
 
       <div class="tab-panel" data-tab-panel="insight">
@@ -66,6 +98,6 @@
     </section>
   </main>
   <footer class="footer"><div class="footer-inner"><span>数据：Open WebUI GitHub Issues，访问于 2026-08-14</span><span><a href="prd-signal-desk.md">查看 PRD</a> · <a href="feedback_issues.json">下载 JSON</a></span></div></footer>
-  <script src="feedback_issues.js"></script><script src="feedback_summary.js"></script><script src="common.js"></script><script src="feedback.js"></script>
+  <script src="feedback_issues.js?v=20260831"></script><script src="feedback_summary.js?v=20260831"></script><script src="common.js?v=20260831"></script><script src="feedback.js?v=20260831"></script>
 </body>
 </html>
