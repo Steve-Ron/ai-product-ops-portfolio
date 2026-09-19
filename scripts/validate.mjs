@@ -93,8 +93,9 @@ for (const resumeLink of expectedResumeLinks) {
 }
 
 forbidText('公开内容', allPublicCopy, '拟入学');
-forbidText('公开内容', allPublicCopy, 'AI 产品运营实习生');
-forbidText('公开内容', allPublicCopy, 'AI 产品运营');
+const applicationHeadline = pages['index.html'].match(/<h1>[\s\S]*?<\/h1>/)?.[0] || '';
+forbidText('求职定位', applicationHeadline, 'AI 产品运营实习生');
+forbidText('求职定位', applicationHeadline, 'AI 产品运营');
 forbidText('公开内容', allPublicCopy, 'AI Product Ops Portfolio');
 forbidText('公开内容', allPublicCopy, '许强-AI产品运营实习简历.pdf');
 forbidText('公开内容', allPublicCopy, 'resume.pdf');
