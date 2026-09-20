@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="249" viewBox="0 0 900 249" role="img" aria-labelledby="title desc">
+<title id="title">反馈类型分布</title><desc id="desc">分母 156 条Issue · 规则初筛 · 不代表用户占比</desc>
+<rect width="100%" height="100%" rx="20" fill="#f5f8f7"/>
+<g font-family="Microsoft YaHei, sans-serif" fill="#132238">
+<text x="30" y="40" font-size="24" font-weight="700">反馈类型分布</text>
+<text x="30" y="70" font-size="13" fill="#5d6b7d">分母 156 条Issue · 规则初筛 · 不代表用户占比</text>
+<text x="30" y="119" font-size="16">问题反馈</text>
+<rect x="230" y="100" width="480.0" height="28" rx="5" fill="#0f766e"/>
+<text x="730" y="119" font-size="16">95 · 60.9%</text>
+<text x="30" y="162" font-size="16">功能建议</text>
+<rect x="230" y="143" width="262.7" height="28" rx="5" fill="#0f766e"/>
+<text x="730" y="162" font-size="16">52 · 33.3%</text>
+<text x="30" y="205" font-size="16">咨询/待判定</text>
+<rect x="230" y="186" width="45.5" height="28" rx="5" fill="#0f766e"/>
+<text x="730" y="205" font-size="16">9 · 5.8%</text>
+</g></svg>

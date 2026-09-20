@@ -1,0 +1,10 @@
+{
+  "preparedAt": "2026-09-20T04:34:38.455470+00:00",
+  "cases": 24,
+  "historicalPairs": 120,
+  "replyTasks": 240,
+  "ruleVersion": "1.0",
+  "caseInputSha256": "13599c9c914b1f316b309dfb29b15dafb39cd627760c07b8c81e6df0f291a47d",
+  "arenaInputSha256": "12aa53326d5c64de6bad25a61eda97fa9bfae5bb24ea1e3ce26ce7a24504f806",
+  "apiCompleted": 0
+}
