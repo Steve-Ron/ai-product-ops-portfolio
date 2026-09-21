@@ -571,3 +571,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .page { width: 100%; padding: 0; }
   .panel, .project-card { break-inside: avoid; box-shadow: none; }
 }
+
+/* 2026-09: 运行证据与个人信息 */
+.education-card { min-height:0; }
+.limitations { margin:32px 0; border-top:1px solid var(--line); padding:22px 0; color:var(--muted); }
+.limitations summary { cursor:pointer; font-weight:700; color:var(--ink); }
+.limitations[open] summary { margin-bottom:18px; }
+.limitations .decision-section { margin-top:20px; }
+.run-evidence { border:1px solid var(--line); border-radius:var(--radius); padding:28px; background:white; }
+.run-evidence>p { color:var(--muted); }
+.result-chart { display:block; width:100%; max-width:900px; height:auto; margin:22px auto; }
+.run-evidence .table-wrap { margin-top:22px; }
+.workbench-actions { margin-bottom:20px; }
+.bar-value { min-width:100px; }
+@media(max-width:640px) { .run-evidence{padding:18px;} .bar-value{min-width:80px;font-size:12px;} }

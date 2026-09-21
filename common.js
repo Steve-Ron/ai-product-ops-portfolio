@@ -22,10 +22,7 @@
       URL.revokeObjectURL(url);
     },
     toCsv(rows, columns) {
-      const quote = (value) => `"${String(value ?? "").replaceAll('"', '""')}"`;
-      return [columns.map((x) => quote(x.label)).join(",")]
-        .concat(rows.map((row) => columns.map((x) => quote(row[x.key])).join(",")))
-        .join("\n");
+      return WorkflowCore.csv(rows, columns);
     },
     bars(container, items, options = {}) {
       if (!container) return;

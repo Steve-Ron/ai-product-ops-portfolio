@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const records = window.ARENA_RECORDS || [];
   const tests = window.TEST_CASES || [];
   const runsKey = "xq-llm-lens-runs-v1";
-  let runs = JSON.parse(localStorage.getItem(runsKey) || "[]");
+  let runs = [];
+  try { const stored=JSON.parse(localStorage.getItem(runsKey) || "[]"); if(Array.isArray(stored)) runs=stored.filter(x=>x && typeof x.testCaseId==="string"); } catch { /* 损坏的本地记录不影响工作台加载。 */ }
   let activeCase = null;
 
   const countBy = (values) => values.reduce((acc, value) => (acc[value] = (acc[value] || 0) + 1, acc), {});
@@ -70,12 +71,14 @@ document.addEventListener("DOMContentLoaded", () => {
     drawerClose.focus();
   }
 
+  let filteredArena = records;
   function renderBadCases() {
     const query = search.value.trim().toLowerCase();
     const rows = records.filter((x) => {
       const hay = `${x.prompt} ${x.modelA} ${x.modelB} ${x.rootCauseSuggestion}`.toLowerCase();
       return (!query || hay.includes(query)) && (!category.value || x.category === category.value) && (!root.value || x.rootCauseSuggestion === root.value) && (!language.value || x.language === language.value);
     });
+    filteredArena = rows;
     bcTable.innerHTML = rows.map((x) => `<tr><td><strong>${App.escape(x.id)}</strong><br><span class="small muted">${App.escape(x.category)} · ${App.escape(x.language)}</span></td><td><div class="truncate" title="${App.escape(x.prompt)}">${App.escape(x.prompt)}</div></td><td><span class="badge ${x.winner === "tie (bothbad)" ? "red" : "teal"}">${App.escape(x.preferredModel)}</span></td><td>${App.escape(x.rootCauseSuggestion)}<br><span class="small muted">${App.escape(x.annotationStatus)}</span></td><td><button class="row-action" data-record="${x.id}">查看证据</button></td></tr>`).join("") || `<tr><td colspan="5" class="empty">没有匹配记录</td></tr>`;
     bcTable.querySelectorAll("[data-record]").forEach((button) => button.addEventListener("click", () => openRecord(button.dataset.record)));
     bcCount.textContent = `当前显示 ${rows.length} / ${records.length} 条记录`;
@@ -142,4 +145,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   document.querySelector("#export-tests").addEventListener("click", () => App.download("llm-lens-test-cases.json", JSON.stringify(tests, null, 2), "application/json;charset=utf-8"));
   document.querySelector("#export-runs").addEventListener("click", () => App.download("llm-lens-local-runs.json", JSON.stringify(runs, null, 2), "application/json;charset=utf-8"));
+
+  document.querySelector('#export-filtered-arena').addEventListener('click',()=>{
+    const csv=App.toCsv(filteredArena,[{key:'id',label:'编号'},{key:'prompt',label:'提示词'},{key:'modelA',label:'模型A'},{key:'answerA',label:'回复A'},{key:'modelB',label:'模型B'},{key:'answerB',label:'回复B'},{key:'winner',label:'公开偏好'},{key:'rootCauseSuggestion',label:'候选根因'},{key:'annotationStatus',label:'复核状态'}]);
+    App.download('llm-lens-filtered-evidence.csv','\ufeff'+csv,'text/csv;charset=utf-8');
+  });
 });

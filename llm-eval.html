@@ -10,43 +10,42 @@
   <meta property="og:description" content="从主观体验到可复核评测决策：产品问题、关键判断、评测资产与交互 MVP。">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="LLM Lens｜大模型产品评测案例">
-  <meta name="twitter:description" content="8 个维度、48 条用例、120 条偏好样本，以及真实的验证边界。">
+  <meta name="twitter:description" content="8 个维度、48 条用例、120 条偏好样本，以及可追溯的评测资产。">
   <title>LLM Lens｜大模型产品评测案例｜许强</title>
-  <link rel="stylesheet" href="style.css?v=20260831d">
+  <link rel="stylesheet" href="style.css?v=20260920">
 </head>
 <body data-page="eval">
-<header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html" aria-label="许强 AI 产品经理作品集首页"><span class="brand-mark">XQ</span><span>AI Product Manager Portfolio</span></a><nav class="nav" aria-label="主导航"><a href="index.html" data-page="home">作品集</a><a href="llm-eval.html" data-page="eval">LLM Lens</a><a href="feedback-insight.html" data-page="feedback">Signal Desk</a><a class="nav-cta" href="downloads/许强-北京理工大学-AI产品经理实习生.pdf">下载简历</a></nav></div></header>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html" aria-label="许强 AI 产品运营作品集首页"><span class="brand-mark">XQ</span><span>AI Product Operations Portfolio</span></a><nav class="nav" aria-label="主导航"><a href="index.html" data-page="home">作品集</a><a href="llm-eval.html" data-page="eval">LLM Lens</a><a href="feedback-insight.html" data-page="feedback">Signal Desk</a><a class="nav-cta" href="downloads/许强-北京理工大学-AI产品运营实习生.pdf">下载简历</a></nav></div></header>
   <main class="page">
     <section class="hero case-hero">
       <div><span class="eyebrow">Project 01 · LLM evaluation</span><h1 class="page-title">LLM Lens：把主观模型体验变成可复核的评测决策。</h1><p class="hero-lede">面向需要比较模型版本、定位 Bad Case 与建立回归基线的 AI 产品团队，将“感觉更好”拆解为统一维度、标准用例、原始证据和人工复核状态。</p><div class="hero-actions"><a class="button" href="#workbench">体验评测工作台 ↓</a><button class="button secondary" id="export-tests">导出测试集</button><button class="button ghost" id="export-arena">导出偏好样本</button></div></div>
-      <aside class="hero-card case-facts"><span class="status-pill"><span aria-hidden="true"></span>个人产品项目</span><strong>产品负责人 · AI 辅助实现</strong><p>我负责问题定义、评测框架、PRD、交互原型、数据分析和验证设计；使用 AI 辅助前端实现与数据处理。</p><div class="contact-list"><div class="contact-item"><span>资产</span><b>48 条结构化评测用例</b></div><div class="contact-item"><span>样本</span><b>120 条双语人类偏好样本</b></div><div class="contact-item"><span>状态</span><b>MVP 完成 · 用例待执行</b></div><div class="contact-item"><span>文档</span><a href="prd-llm-lens.md">查看 PRD ↗</a></div></div></aside>
+      <aside class="hero-card case-facts"><span class="status-pill"><span aria-hidden="true"></span>个人产品项目</span><strong>产品负责人 · AI 辅助实现</strong><p>我负责问题定义、评测框架、PRD、交互原型、数据分析和验证设计；使用 AI 辅助前端实现与数据处理。</p><div class="contact-list"><div class="contact-item"><span>资产</span><b>48 条结构化评测用例</b></div><div class="contact-item"><span>样本</span><b>120 条双语人类偏好样本</b></div><div class="contact-item"><span>状态</span><b>24条执行集已就绪 · API记录0条</b></div><div class="contact-item"><span>文档</span><a href="prd-llm-lens.md">查看 PRD ↗</a></div></div></aside>
     </section>
 
+
+    <section class="section run-evidence" id="results">
+      <div class="section-head"><div><span class="eyebrow">执行资产</span><h2>24条首轮用例，240条历史回复评分任务</h2></div><span class="badge amber">API实跑记录：0条</span></div>
+      <p>已运行测试集准备与完整性校验：48条原始用例中选出24条，补齐2条材料，拆分3条多轮对话；120组偏好记录展开为240条回复。国内模型评分需要在本机配置API，当前没有发布模型成绩。</p>
+      <div class="hero-actions"><a class="button" href="downloads/runs/llm-cases-24.json">下载24条执行集</a><a class="button secondary" href="downloads/runs/llm-task-manifest.json">查看执行清单</a><a class="button secondary" href="downloads/runs/llm-score-template.csv">下载中文评分表头</a><a class="text-link" href="scripts/run_pipeline.py">查看带注释运行脚本 ↗</a><a class="text-link" href="docs/runbook.md">接入与复核步骤 ↗</a></div>
+    </section>
     <section class="case-summary" aria-labelledby="recruiter-summary">
       <div class="section-head compact"><div><span class="eyebrow">Case at a glance</span><h2 id="recruiter-summary">招聘官摘要</h2></div><p>先看我的产品判断与实际职责，再进入数据工作台复核细节。</p></div>
       <div class="case-summary-grid">
         <article><span>目标用户</span><h3>AI 产品经理与模型评测协作角色</h3><p>需要在模型选型、版本回归或上线前验收中建立统一比较口径。</p></article>
         <article><span>产品问题</span><h3>模型体验主观，问题难以复现</h3><p>缺少统一维度、固定用例、原始响应与版本记录，讨论容易停留在印象。</p></article>
         <article><span>我的角色</span><h3>产品负责人（AI 辅助实现）</h3><p>完成问题定义、PRD、8 维框架、用例设计、交互原型、数据抽样与验收口径。</p></article>
-        <article><span>项目状态</span><h3>可交互 MVP，真实执行待补</h3><p>工作台与数据资产已完成；48 条用例保持待执行，不展示没有 API 证据的得分。</p></article>
+        <article><span>项目状态</span><h3>可交互工作台与批处理脚本</h3><p>完成48条用例设计，整理120组历史偏好记录；首轮24条执行集与240条回复评分任务已校验。</p></article>
       </div>
     </section>
 
-    <section class="section decision-section">
-      <div class="section-head compact"><div><span class="eyebrow">Product decisions</span><h2>关键产品判断</h2></div><p>决定这个项目可信度的不是功能数量，而是三条数据与结论边界。</p></div>
-      <div class="decision-grid">
-        <article><span>01</span><h3>先写验收标准，再看模型回答</h3><p>避免看到结果后临时移动判定口径；每条用例同时记录风险、输入与可观察的通过条件。</p></article>
-        <article><span>02</span><h3>偏好、规则与人工结论分层</h3><p>LMArena 只提供公开人类偏好；根因是规则初筛，必须由人工引用证据句完成复核。</p></article>
-        <article><span>03</span><h3>记录不确定性，不制造排行榜</h3><p>抽样数据不足以代表总体模型水平；没有统一版本和真实 API 基线时，不输出伪精确排名。</p></article>
-      </div>
-    </section>
+
 
     <section class="delivery-strip" aria-label="已完成交付">
       <div><span class="eyebrow">Deliverables</span><h2>已完成交付</h2></div>
       <ul><li>8 维评测框架</li><li>48 条结构化评测用例</li><li>120 条双语人类偏好样本</li><li>评测工作台 MVP</li><li>PRD 与 JSON/CSV 导出</li></ul>
     </section>
 
-    <section class="notice"><span class="notice-icon">✓</span><div><strong>真实性边界</strong><p>LMArena 胜负来自公开人类偏好；“根因”只是一组可解释规则的初筛建议，必须人工复核。48 条自建用例已完成设计，但没有真实 API 运行记录，因此不展示虚构得分。</p></div></section>
+
 
     <section class="evidence-grid" aria-label="项目快速说明">
       <article class="evidence-card"><span>产品问题</span><strong>体验难复核</strong><p>把“这个回答不好”转换为统一维度、验收标准、原始响应和复核状态。</p></article>
@@ -79,11 +78,11 @@
           <div class="field"><label for="bc-root">初筛根因</label><select id="bc-root"><option value="">全部</option></select></div>
           <div class="field"><label for="bc-language">语言</label><select id="bc-language"><option value="">全部</option></select></div>
         </div>
-        <div class="table-wrap"><table><thead><tr><th>ID / 类型</th><th>问题摘要</th><th>偏好结果</th><th>根因建议</th><th>复核</th></tr></thead><tbody id="badcase-table"></tbody></table></div><p id="badcase-count" class="small muted" style="margin:12px 0 0"></p>
+        <div class="hero-actions"><button class="button secondary" id="export-filtered-arena">导出当前筛选与完整回复</button></div><div class="table-wrap"><table><thead><tr><th>ID / 类型</th><th>问题摘要</th><th>偏好结果</th><th>根因建议</th><th>复核</th></tr></thead><tbody id="badcase-table"></tbody></table></div><p id="badcase-count" class="small muted" style="margin:12px 0 0"></p>
       </div>
 
       <div class="tab-panel" data-tab-panel="tests" hidden>
-        <div class="notice warn" style="margin-top:22px"><span class="notice-icon">!</span><div><strong>当前 48 条均为“待执行”</strong><p>选择用例、粘贴真实模型输出并评分后，记录只保存在你的浏览器 localStorage。导出运行记录后才形成可审计的执行证据。</p></div></div>
+        <div class="notice warn" style="margin-top:22px"><span class="notice-icon">!</span><div><strong>48条设计用例 · 24条首轮执行集</strong><p>选择用例后可粘贴实际输出并记录人工评分。记录保存于当前浏览器；请导出留档。批量API执行见上方运行脚本。</p></div></div>
         <div class="toolbar"><div class="field grow"><label for="test-search">搜索用例</label><input id="test-search" placeholder="输入场景或验收标准"></div><div class="field"><label for="test-dimension">评测维度</label><select id="test-dimension"><option value="">全部</option></select></div><div class="field"><label for="test-status">执行状态</label><select id="test-status"><option value="">全部</option><option>待执行</option><option>已有本地记录</option></select></div><button class="button small secondary" id="export-runs">导出本地运行记录</button></div>
         <div class="dashboard-grid">
           <div><div id="case-grid" class="case-grid"></div><p id="case-count" class="small muted" style="margin-top:12px"></p></div>
@@ -98,10 +97,19 @@
         </div>
       </div>
     </section>
+
+    <details class="limitations"><summary>项目局限与后续迭代</summary>    <section class="notice"><span class="notice-icon">✓</span><div><strong>真实性边界</strong><p>LMArena 胜负来自公开人类偏好；“根因”只是一组可解释规则的初筛建议，必须人工复核。48 条自建用例已完成设计，但没有真实 API 运行记录，因此不展示虚构得分。</p></div></section>    <section class="section decision-section">
+      <div class="section-head compact"><div><span class="eyebrow">Product decisions</span><h2>关键产品判断</h2></div><p>决定这个项目可信度的不是功能数量，而是三条数据与结论边界。</p></div>
+      <div class="decision-grid">
+        <article><span>01</span><h3>先写验收标准，再看模型回答</h3><p>避免看到结果后临时移动判定口径；每条用例同时记录风险、输入与可观察的通过条件。</p></article>
+        <article><span>02</span><h3>偏好、规则与人工结论分层</h3><p>LMArena 只提供公开人类偏好；根因是规则初筛，必须由人工引用证据句完成复核。</p></article>
+        <article><span>03</span><h3>记录不确定性，不制造排行榜</h3><p>抽样数据不足以代表总体模型水平；没有统一版本和真实 API 基线时，不输出伪精确排名。</p></article>
+      </div>
+    </section></details>
   </main>
 
   <div class="drawer" id="badcase-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true"><div class="drawer-panel"><div class="drawer-head"><div><span class="eyebrow">Evidence review</span><h2 id="drawer-title" style="margin:10px 0 0">Bad Case 详情</h2></div><button class="icon-button" id="drawer-close" aria-label="关闭 Bad Case 详情">×</button></div><div id="drawer-content"></div></div></div>
   <footer class="footer"><div class="footer-inner"><span>数据：LMArena Human Preference 100k，访问于 2026-08-14</span><span><a href="prd-llm-lens.md">查看 PRD</a> · <a href="data-manifest.json">数据清单</a></span></div></footer>
-  <script src="arena_records.js?v=20260831"></script><script src="test_cases.js?v=20260831"></script><script src="common.js?v=20260831"></script><script src="llm-eval.js?v=20260831b"></script>
+  <script src="arena_records.js?v=20260920"></script><script src="test_cases.js?v=20260920"></script><script src="workflow-core.js?v=20260920"></script><script src="common.js?v=20260920"></script><script src="llm-eval.js?v=20260920"></script>
 </body>
 </html>
