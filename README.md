@@ -19,7 +19,9 @@
 
 ## 运行与交付
 
-- `python scripts/run_pipeline.py prepare`：从现有数据准备24条评测用例、240条历史回复评审任务，并生成156条反馈的规则标签台账、主题统计、类型统计和图表。
+- `python scripts/run_pipeline.py prepare`：从现有数据准备24条评测用例、240条历史回复评审任务。
+- `python scripts/run_pipeline.py feedback`：生成156条反馈的规则标签台账、主题统计、类型统计和图表。
+- `python scripts/build_assisted_review.py`：将已保存的6条AI辅助评审与原始回复合并，复算4条候选Bad Case并导出CSV与简要结果；此命令不重新调用模型进行评分。
 - `python -m unittest discover -s tests -p "test_*.py"`：验证数据准备、评分校验、异常留证与重试逻辑。
 - `node --test tests/workflow.test.cjs`：验证筛选导出、CSV安全处理、周报和开放问题排序。
 - 国内模型API配置、真实调用、续跑、评分导出与双人复核步骤见 [运行手册](docs/runbook.md)。`.env.example`只列配置名；密钥和原始调用日志不得提交。

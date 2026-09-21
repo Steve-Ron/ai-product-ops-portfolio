@@ -25,7 +25,7 @@
 
     <section class="section run-evidence" id="results">
       <div class="section-head"><div><span class="eyebrow">可复现运行结果</span><h2>156条反馈，已完成清洗校验与统计导出</h2></div><span class="badge teal">离线流程已运行</span></div>
-      <p>模型/API连接45条、界面与对话流程22条、知识库/RAG 21条，合计88条，占本批反馈56.41%。分类沿用原始规则初筛；数据快照2026-08-14，处理版本2026-09-20，人工复核0条。</p>
+      <p>模型/API连接45条、界面与对话流程22条、知识库/RAG 21条，合计88条，占本批反馈56.41%。分类沿用原始规则初筛；数据快照2026-08-14，流程版本2026-09-20（最近处理时间见统计文件），人工复核0条。</p>
       <img class="result-chart" src="downloads/runs/signal-themes.svg" alt="156条反馈的9类主题分布：模型与API连接45条，其他27条，界面22条，RAG21条" loading="lazy">
       <div class="hero-actions"><a class="button" href="downloads/runs/signal-feedback.csv">下载156条反馈台账</a><a class="button secondary" href="downloads/runs/signal-themes.csv">下载主题统计</a><a class="button secondary" href="downloads/runs/signal-types.csv">下载类型统计</a><a class="text-link" href="docs/runbook.md">运行说明与标注流程 ↗</a></div>
       <div class="table-wrap"><table><thead><tr><th>编号</th><th>问题摘要</th><th>原规则分类</th><th>初筛分</th></tr></thead><tbody><tr><td>#28563</td><td>较大PPTX主预览区域空白</td><td>其他</td><td>39</td></tr><tr><td>#28561</td><td>系统界面缩放继承值显示异常</td><td>界面与对话流程</td><td>51</td></tr><tr><td>#28559</td><td>关闭淡入后思考指示器不显示</td><td>其他</td><td>55</td></tr></tbody></table></div>
@@ -36,7 +36,7 @@
         <article><span>目标用户</span><h3>AI 产品经理与用户反馈协作角色</h3><p>需要从分散反馈中快速定位问题簇，并建立可回溯的人工复核队列。</p></article>
         <article><span>产品问题</span><h3>反馈分散，热度难转化为决策</h3><p>Issue 结构不一、主题混杂；评论数能反映讨论，但不能直接说明业务影响。</p></article>
         <article><span>我的角色</span><h3>产品负责人（AI 辅助实现）</h3><p>完成数据范围、隐私策略、分类体系、Triage 规则、PRD、MVP 与产品假设。</p></article>
-        <article><span>项目状态</span><h3>可交互 MVP，分类准确性待评估</h3><p>工作台与源链接已完成；规则分类尚未经过成规模人工标注，不冒充真值。</p></article>
+        <article><span>项目状态</span><h3>统计、筛选与复盘导出已完成</h3><p>156条台账可按主题、类型、状态和初筛档位筛选，导出当前范围CSV及运营复盘清单。</p></article>
       </div>
     </section>
 
@@ -52,7 +52,7 @@
     <section class="evidence-grid" aria-label="项目快速说明">
       <article class="evidence-card"><span>产品问题</span><strong>反馈分散难判断</strong><p>先建立可搜索、可回溯的反馈台账，再把问题簇转成待验证的产品假设。</p></article>
       <article class="evidence-card"><span>已完成</span><strong>数据治理 + MVP</strong><p>156 条公开 Issue、9 类主题、3 类反馈类型，以及筛选、原页回溯和 CSV 导出。</p></article>
-      <article class="evidence-card"><span>下一轮验证</span><strong>人工标注抽检</strong><p>抽检“其他/待判定”样本、计算分类一致性，再按 provider 与链路阶段拆分高频问题簇。</p></article>
+      <article class="evidence-card"><span>运营交付</span><strong>筛选结果直接用于复盘</strong><p>当前筛选范围与导出保持一致；开放问题清单排除已关闭记录，支持问题跟进与周报整理。</p></article>
     </section>
 
     <section class="kpi-row"><article class="kpi"><strong id="fb-total">156</strong><span>公开用户问题</span></article><article class="kpi"><strong id="fb-open">51</strong><span>快照中开放状态</span></article><article class="kpi"><strong id="fb-median">43</strong><span>Triage Score 中位数</span></article><article class="kpi"><strong id="fb-top-theme">45</strong><span>最大主题问题数</span></article></section>
@@ -65,12 +65,11 @@
           <section><div class="panel-title"><div><h2>主题分布</h2><p>基于标题与公开标签的规则分类</p></div></div><div id="theme-bars" class="bars"></div></section>
           <aside><div class="panel-title"><div><h2>反馈类型</h2><p>问题反馈 / 功能建议 / 待判定</p></div></div><div id="type-bars" class="bars"></div></aside>
         </div>
-        <div class="section-head" style="margin-top:34px"><div><h2>三条可执行的产品假设</h2><p>这是“下一步验证什么”，不是在缺少业务数据时直接宣布结论。</p></div></div>
+        <div class="section-head" style="margin-top:34px"><div><h2>两项产品迭代建议</h2><p>根据本批规则统计提出的建议，附验证指标。</p></div></div>
         <div class="project-grid">
           <article class="project-card" style="min-height:0"><span class="project-index">HYPOTHESIS 01</span><h3>模型/API 连接需要更强的自检与错误解释</h3><p>样本中最大主题为模型与 API 连接。下一步应按 provider、错误码和配置阶段拆分，并验证“一键连接测试 + 可读错误建议”能否减少重复 Issue。</p><div class="project-footer"><strong>验证指标：同类新增 Issue / 自检完成率</strong></div></article>
-          <article class="project-card alt" style="min-height:0"><span class="project-index">HYPOTHESIS 02</span><h3>RAG 文件链路需要可见进度与可诊断状态</h3><p>知识库与 RAG 形成独立问题簇。可继续细分上传、解析、切片、embedding 和召回；优先补“状态可见”和失败恢复，而不是只加功能。</p><div class="project-footer"><strong>验证指标：任务成功率 / 中断恢复率</strong></div></article>
+          <article class="project-card alt" style="min-height:0"><span class="project-index">HYPOTHESIS 02</span><h3>RAG 文件链路需要可见进度与可诊断状态</h3><p>21条反馈被规则归入知识库/RAG主题，尚未确认共同根因。下一步按上传、解析、索引和召回细分，再验证进度展示与失败恢复是否对应主要问题。</p><div class="project-footer"><strong>验证指标：任务成功率 / 中断恢复率</strong></div></article>
         </div>
-        <div class="notice warn" style="margin-top:18px"><span class="notice-icon">!</span><div><strong>分类仍需迭代</strong><p>“其他”类占有明显比例，说明标题规则无法覆盖所有语义。下一轮应人工抽检“其他”样本并拆出新主题，而不是为了图表好看强行归类。</p></div></div>
       </div>
 
       <div class="tab-panel" data-tab-panel="inbox" hidden>
@@ -105,7 +104,7 @@
         <article><span>02</span><h3>保留“其他”和“待判定”</h3><p>标题规则无法覆盖完整语义；允许未知项比为了图表整齐而强行归类更可信。</p></article>
         <article><span>03</span><h3>Triage 只用于人工复核队列</h3><p>互动、状态和阻塞关键词不能替代用户规模、商业影响、研发成本与战略优先级。</p></article>
       </div>
-    </section></details>
+    </section><p><strong>人工标注抽检：</strong>后续优先复核27条“其他”与9条“咨询/待判定”记录（两组可能重叠），记录分歧后修订分类规则，再评估双人一致性。</p></details>
   </main>
   <footer class="footer"><div class="footer-inner"><span>数据：Open WebUI GitHub Issues，访问于 2026-08-14</span><span><a href="prd-signal-desk.md">查看 PRD</a> · <a href="feedback_issues.json">下载 JSON</a></span></div></footer>
   <script src="feedback_issues.js?v=20260920"></script><script src="feedback_summary.js?v=20260920"></script><script src="workflow-core.js?v=20260920"></script><script src="common.js?v=20260920"></script><script src="feedback.js?v=20260920"></script>
