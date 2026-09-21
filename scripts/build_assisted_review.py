@@ -16,11 +16,13 @@ for entry in review['reviews']:
     record = lookup[source_id]
     assert set(entry['scores']) | set(review['unscored']) == set(DIMENSIONS)
     assert all(type(v) is int and 1 <= v <= 5 for v in entry['scores'].values())
+    assert set(entry['scoreEvidence']) == set(entry['scores'])
+    assert all(entry['scoreEvidence'].values())
     bad = any(v <= 2 for v in entry['scores'].values())
     rows.append({'样本编号':entry['id'],'提示词':record['prompt'],'模型回复':record['answer'+side],
         '历史模型':record['model'+side], **{d+'得分':entry['scores'].get(d,'') for d in DIMENSIONS},
         '根因标签':'；'.join(entry['tags']) or '无明显严重缺陷','BadCase标记':'候选' if bad else '否',
-        '问题依据':entry['evidence'],'改进建议':entry['action'],'未评分原因':json.dumps(review['unscored'],ensure_ascii=False),
+        '逐维评分依据':json.dumps(entry['scoreEvidence'],ensure_ascii=False),'问题依据':entry['evidence'],'改进建议':entry['action'],'未评分原因':json.dumps(review['unscored'],ensure_ascii=False),
         '评审方式':review['method'],'人工复核状态':'未复核','评审日期':review['date'],'来源':record['source']['url']})
 write_csv(PUBLIC/'llm-assisted-review.csv', rows, list(rows[0]))
 tags = Counter(t for r in review['reviews'] for t in r['tags'])
