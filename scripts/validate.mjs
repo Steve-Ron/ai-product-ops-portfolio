@@ -70,10 +70,15 @@ const pages = {
 const readme = read('README.md');
 const allPublicCopy = `${Object.values(pages).join('\n')}\n${readme}`;
 
-requireText('首页', pages['index.html'], '<title>许强｜AI 产品经理作品集</title>');
-requireText('首页', pages['index.html'], 'AI 产品经理实习生');
+requireText('首页', pages['index.html'], '<title>许强｜AI 产品运营作品集</title>');
+requireText('首页', pages['index.html'], 'AI 产品运营实习生');
 requireText('首页', pages['index.html'], '北京理工大学数字经济硕士在读');
-requireText('首页', pages['index.html'], '非全日制');
+requireText('首页', pages['index.html'], '全日制');
+requireText('首页', pages['index.html'], '成都文理学院');
+requireText('首页', pages['index.html'], '2021.09 - 2025.06');
+requireText('首页', pages['index.html'], '2026.09 - 2028.06');
+forbidText('公开内容', allPublicCopy, '非全日制');
+forbidText('公开内容', allPublicCopy, '周末授课');
 requireText('首页', pages['index.html'], '工作日可全勤 5 天');
 requireText('首页', pages['index.html'], '可连续实习 6 个月以上');
 requireText('首页', pages['index.html'], '产品定义');
@@ -84,8 +89,8 @@ requireText('首页', pages['index.html'], '识别问题');
 requireText('首页', pages['index.html'], '个人产品项目');
 
 const expectedResumeLinks = [
-  'downloads/许强-北京理工大学-AI产品经理实习生.pdf',
-  'downloads/Qiang-Xu-BIT-AI-Product-Management-Intern.pdf',
+  'downloads/许强-北京理工大学-AI产品运营实习生.pdf',
+  'downloads/许强-北京理工大学-AI产品运营实习生.docx',
 ];
 for (const resumeLink of expectedResumeLinks) {
   requireText('首页', pages['index.html'], resumeLink);
@@ -94,12 +99,12 @@ for (const resumeLink of expectedResumeLinks) {
 
 forbidText('公开内容', allPublicCopy, '拟入学');
 const applicationHeadline = pages['index.html'].match(/<h1>[\s\S]*?<\/h1>/)?.[0] || '';
-forbidText('求职定位', applicationHeadline, 'AI 产品运营实习生');
-forbidText('求职定位', applicationHeadline, 'AI 产品运营');
+requireText('求职定位', applicationHeadline, 'AI 产品运营实习生');
+forbidText('求职定位', applicationHeadline, 'AI 产品经理实习生');
 forbidText('公开内容', allPublicCopy, 'AI Product Ops Portfolio');
 forbidText('公开内容', allPublicCopy, '许强-AI产品运营实习简历.pdf');
 forbidText('公开内容', allPublicCopy, 'resume.pdf');
-requireText('README', readme, 'AI 产品经理实习生');
+requireText('README', readme, 'AI 产品运营实习生');
 
 const llm = pages['llm-eval.html'];
 for (const expected of [
@@ -181,7 +186,7 @@ if (errors.length) {
 checks.push(
   '招聘定位与在读状态一致',
   '项目职责与真实性边界完整',
-  '中英文简历链接有效',
+  '中文PDF与Word简历链接有效',
   '页面元数据与本地链接有效',
   '数据数量与状态真实',
   '公开反馈隐私字段已最小化',
