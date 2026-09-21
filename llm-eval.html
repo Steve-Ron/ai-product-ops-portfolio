@@ -24,8 +24,10 @@
 
 
     <section class="section run-evidence" id="results">
-      <div class="section-head"><div><span class="eyebrow">执行资产</span><h2>24条首轮用例，240条历史回复评分任务</h2></div><span class="badge amber">API实跑记录：0条</span></div>
-      <p>已运行测试集准备与完整性校验：48条原始用例中选出24条，补齐2条材料，拆分3条多轮对话；120组偏好记录展开为240条回复。国内模型评分需要在本机配置API，当前没有发布模型成绩。</p>
+      <div class="section-head"><div><span class="eyebrow">小样本评审结果</span><h2>评审6条历史回复，定位4条候选Bad Case</h2></div><span class="badge amber">AI辅助评审 · 非API实跑</span></div>
+      <p>2026-09-21按原始顺序取前3组中文对话，共6条真实历史回复：4条发现明显问题，候选比例66.7%（仅本次小样本）。语言不匹配、推理前提混淆、歧义输入过度解释各2条，标签可重叠。逐条保留原文、评分依据与修改建议；未人工复核，不用于模型排名。</p>
+      <div class="hero-actions"><a class="button" href="downloads/runs/llm-assisted-review.csv">下载6条评分结果</a><a class="button secondary" href="downloads/runs/simple-results.md">两个项目的简要结果</a><a class="text-link" href="downloads/runs/llm-assisted-review.json">查看逐条评审依据 ↗</a></div>
+      <p>8维评分字段完整保留，本轮3维可评，其他5维因不适用或缺乏证据留空。另已准备24条用例与240条历史回复评分任务；API实跑记录仍为0条。</p>
       <div class="hero-actions"><a class="button" href="downloads/runs/llm-cases-24.json">下载24条执行集</a><a class="button secondary" href="downloads/runs/llm-task-manifest.json">查看执行清单</a><a class="button secondary" href="downloads/runs/llm-score-template.csv">下载中文评分表头</a><a class="text-link" href="scripts/run_pipeline.py">查看带注释运行脚本 ↗</a><a class="text-link" href="docs/runbook.md">接入与复核步骤 ↗</a></div>
     </section>
     <section class="case-summary" aria-labelledby="recruiter-summary">
