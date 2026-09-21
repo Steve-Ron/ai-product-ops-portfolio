@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-21",
+  "samplePairs": 3,
+  "responsesReviewed": 6,
+  "candidateBadCases": 4,
+  "candidateRate": 0.6667,
+  "tagCounts": {
+    "回复语言不匹配": 2,
+    "推理前提混淆": 2,
+    "歧义输入过度解释": 2
+  },
+  "apiCalls": 0,
+  "humanReviewed": 0,
+  "sampling": "arena_records.json中按原始顺序取前3条language为中文的记录，每组A/B两条回复，共6条；未按表现筛选",
+  "method": "当前对话助手逐条阅读历史回复后的AI辅助评审；非DeepSeek调用、非盲评、非人工复核",
+  "limitation": "仅3个提示词的便利小样本，两条回复共享同一提示词；不能外推模型整体质量或用于模型排名。标签可重叠，不计算总体八维平均分。"
+}
