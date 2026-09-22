@@ -6,20 +6,20 @@
   <link rel="canonical" href="https://steve-ron.github.io/ai-product-ops-portfolio/feedback-insight.html">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://steve-ron.github.io/ai-product-ops-portfolio/feedback-insight.html">
-  <meta property="og:title" content="Signal Desk｜AI 产品用户反馈洞察案例">
+  <meta property="og:title" content="Signal Desk｜用户反馈分析与产品问题诊断">
   <meta property="og:description" content="从 156 条分散 Issue 到可追溯产品输入：数据治理、问题聚类、产品假设与人工复核。">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Signal Desk｜AI 产品用户反馈洞察案例">
+  <meta name="twitter:title" content="Signal Desk｜用户反馈分析与产品问题诊断">
   <meta name="twitter:description" content="156 条公开反馈、9 类主题、3 类反馈类型，以及可下载的数据结果。">
-  <title>Signal Desk｜AI 产品用户反馈洞察案例｜许强</title>
-  <link rel="stylesheet" href="style.css?v=20260920">
+  <title>Signal Desk｜用户反馈分析与产品问题诊断｜许强</title>
+  <link rel="stylesheet" href="style.css?v=20260922">
 </head>
 <body data-page="feedback">
-<header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html" aria-label="许强 AI 产品运营作品集首页"><span class="brand-mark">XQ</span><span>AI Product Operations Portfolio</span></a><nav class="nav" aria-label="主导航"><a href="index.html" data-page="home">作品集</a><a href="llm-eval.html" data-page="eval">LLM Lens</a><a href="feedback-insight.html" data-page="feedback">Signal Desk</a><a class="nav-cta" href="downloads/许强-北京理工大学-AI产品运营实习生.pdf">下载简历</a></nav></div></header>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html" aria-label="许强 数据分析作品集首页"><span class="brand-mark">XQ</span><span>Data Analysis Portfolio</span></a><nav class="nav" aria-label="主导航"><a href="index.html" data-page="home">作品集</a><a href="llm-eval.html" data-page="eval">LLM Lens</a><a href="feedback-insight.html" data-page="feedback">Signal Desk</a><a class="nav-cta" href="downloads/许强-北京理工大学-数据分析实习生.pdf">下载简历</a></nav></div></header>
   <main class="page">
     <section class="hero case-hero">
-      <div><span class="eyebrow">Project 02 · Voice of user</span><h1 class="page-title">Signal Desk：让 156 条分散反馈变成可追溯的产品输入。</h1><p class="hero-lede">面向需要从用户声音中识别问题簇、形成验证假设的 AI 产品团队，将公开 Issue 清洗为可搜索、可回溯、可人工复核的需求初筛工作台。</p><div class="hero-actions"><a class="button" href="#workbench">体验反馈工作台 ↓</a><button class="button secondary" id="export-feedback">导出当前筛选 CSV</button><a class="button ghost" href="https://github.com/open-webui/open-webui/issues" target="_blank" rel="noreferrer">打开数据源 ↗</a></div></div>
-      <aside class="hero-card case-facts"><span class="status-pill"><span aria-hidden="true"></span>个人产品项目</span><strong>产品负责人 · AI 辅助实现</strong><p>我负责问题定义、分类框架、PRD、交互原型、数据分析和验证设计；使用 AI 辅助前端实现与数据处理。</p><div class="contact-list"><div class="contact-item"><span>资产</span><b>156 条公开用户反馈</b></div><div class="contact-item"><span>结构</span><b>9 类主题 · 3 类反馈类型</b></div><div class="contact-item"><span>状态</span><b>离线统计已运行 · 规则初筛</b></div><div class="contact-item"><span>文档</span><a href="prd-signal-desk.md">查看 PRD ↗</a></div></div></aside>
+      <div><span class="eyebrow">Project 01 · Product &amp; business analysis</span><h1 class="page-title">Signal Desk：用户反馈分析与产品问题诊断</h1><p class="hero-lede">围绕“哪些产品问题值得优先复核”，整理 156 条公开反馈，按主题、类型与状态统计分布，提出产品优化建议及后续验证指标。</p><div class="hero-actions"><a class="button" href="#workbench">体验反馈工作台 ↓</a><button class="button secondary" id="export-feedback">导出当前筛选 CSV</button><a class="button ghost" href="https://github.com/open-webui/open-webui/issues" target="_blank" rel="noreferrer">打开数据源 ↗</a></div></div>
+      <aside class="hero-card case-facts"><span class="status-pill"><span aria-hidden="true"></span>个人产品项目</span><strong>分析设计与结果呈现 · AI 辅助实现</strong><p>我负责问题定义、分类框架、PRD、交互原型、数据分析和验证设计；使用 AI 辅助前端实现与数据处理。</p><div class="contact-list"><div class="contact-item"><span>资产</span><b>156 条公开用户反馈</b></div><div class="contact-item"><span>结构</span><b>9 类主题 · 3 类反馈类型</b></div><div class="contact-item"><span>状态</span><b>离线统计已运行 · 规则初筛</b></div><div class="contact-item"><span>文档</span><a href="prd-signal-desk.md">查看 PRD ↗</a></div></div></aside>
     </section>
 
 
@@ -31,12 +31,12 @@
       <div class="table-wrap"><table><thead><tr><th>编号</th><th>问题摘要</th><th>原规则分类</th><th>初筛分</th></tr></thead><tbody><tr><td>#28563</td><td>较大PPTX主预览区域空白</td><td>其他</td><td>39</td></tr><tr><td>#28561</td><td>系统界面缩放继承值显示异常</td><td>界面与对话流程</td><td>51</td></tr><tr><td>#28559</td><td>关闭淡入后思考指示器不显示</td><td>其他</td><td>55</td></tr></tbody></table></div>
     </section>
     <section class="case-summary" aria-labelledby="recruiter-summary">
-      <div class="section-head compact"><div><span class="eyebrow">Case at a glance</span><h2 id="recruiter-summary">招聘官摘要</h2></div><p>从原始用户声音到问题清单，展示整理、分类和复盘流程。</p></div>
+      <div class="section-head compact"><div><span class="eyebrow">Case at a glance</span><h2 id="recruiter-summary">招聘官摘要</h2></div><p>从数据口径、分类统计到建议与验证，展示完整分析过程。</p></div>
       <div class="case-summary-grid">
         <article><span>目标用户</span><h3>AI 产品经理与用户反馈协作角色</h3><p>需要从分散反馈中快速定位问题簇，并建立可回溯的人工复核队列。</p></article>
         <article><span>产品问题</span><h3>反馈分散，热度难转化为决策</h3><p>Issue 结构不一、主题混杂；评论数能反映讨论，但不能直接说明业务影响。</p></article>
-        <article><span>我的角色</span><h3>产品负责人（AI 辅助实现）</h3><p>完成数据范围、隐私策略、分类体系、Triage 规则、PRD、MVP 与产品假设。</p></article>
-        <article><span>项目状态</span><h3>统计、筛选与复盘导出已完成</h3><p>156条台账可按主题、类型、状态和初筛档位筛选，导出当前范围CSV及运营复盘清单。</p></article>
+        <article><span>我的角色</span><h3>分类分析与验证设计（AI 辅助实现）</h3><p>完成数据范围、隐私策略、分类体系、Triage 规则、PRD、MVP 与产品假设。</p></article>
+        <article><span>项目状态</span><h3>统计、筛选与复盘导出已完成</h3><p>156条台账可按主题、类型、状态和初筛档位筛选，导出当前范围CSV及分析复盘清单。</p></article>
       </div>
     </section>
 
@@ -52,7 +52,7 @@
     <section class="evidence-grid" aria-label="项目快速说明">
       <article class="evidence-card"><span>产品问题</span><strong>反馈分散难判断</strong><p>先建立可搜索、可回溯的反馈台账，再把问题簇转成待验证的产品假设。</p></article>
       <article class="evidence-card"><span>已完成</span><strong>数据治理 + MVP</strong><p>156 条公开 Issue、9 类主题、3 类反馈类型，以及筛选、原页回溯和 CSV 导出。</p></article>
-      <article class="evidence-card"><span>运营交付</span><strong>筛选结果直接用于复盘</strong><p>当前筛选范围与导出保持一致；开放问题清单排除已关闭记录，支持问题跟进与周报整理。</p></article>
+      <article class="evidence-card"><span>分析交付</span><strong>筛选结果直接用于复盘</strong><p>当前筛选范围与导出保持一致；开放问题清单排除已关闭记录，支持问题跟进与周报整理。</p></article>
     </section>
 
     <section class="kpi-row"><article class="kpi"><strong id="fb-total">156</strong><span>公开用户问题</span></article><article class="kpi"><strong id="fb-open">51</strong><span>快照中开放状态</span></article><article class="kpi"><strong id="fb-median">43</strong><span>Triage Score 中位数</span></article><article class="kpi"><strong id="fb-top-theme">45</strong><span>最大主题问题数</span></article></section>
@@ -107,6 +107,6 @@
     </section><p><strong>人工标注抽检：</strong>后续优先复核27条“其他”与9条“咨询/待判定”记录（两组可能重叠），记录分歧后修订分类规则，再评估双人一致性。</p></details>
   </main>
   <footer class="footer"><div class="footer-inner"><span>数据：Open WebUI GitHub Issues，访问于 2026-08-14</span><span><a href="prd-signal-desk.md">查看 PRD</a> · <a href="feedback_issues.json">下载 JSON</a></span></div></footer>
-  <script src="feedback_issues.js?v=20260920"></script><script src="feedback_summary.js?v=20260920"></script><script src="workflow-core.js?v=20260920"></script><script src="common.js?v=20260920"></script><script src="feedback.js?v=20260920"></script>
+  <script src="feedback_issues.js?v=20260922"></script><script src="feedback_summary.js?v=20260922"></script><script src="workflow-core.js?v=20260922"></script><script src="common.js?v=20260922"></script><script src="feedback.js?v=20260922"></script>
 </body>
 </html>

@@ -6,20 +6,20 @@
   <link rel="canonical" href="https://steve-ron.github.io/ai-product-ops-portfolio/llm-eval.html">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://steve-ron.github.io/ai-product-ops-portfolio/llm-eval.html">
-  <meta property="og:title" content="LLM Lens｜大模型产品评测案例">
+  <meta property="og:title" content="LLM Lens｜大模型评测口径与偏好样本分析">
   <meta property="og:description" content="从主观体验到可复核评测决策：产品问题、关键判断、评测资产与交互 MVP。">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="LLM Lens｜大模型产品评测案例">
+  <meta name="twitter:title" content="LLM Lens｜大模型评测口径与偏好样本分析">
   <meta name="twitter:description" content="8 个维度、48 条用例、120 条偏好样本，以及可追溯的评测资产。">
-  <title>LLM Lens｜大模型产品评测案例｜许强</title>
-  <link rel="stylesheet" href="style.css?v=20260920">
+  <title>LLM Lens｜大模型评测口径与偏好样本分析｜许强</title>
+  <link rel="stylesheet" href="style.css?v=20260922">
 </head>
 <body data-page="eval">
-<header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html" aria-label="许强 AI 产品运营作品集首页"><span class="brand-mark">XQ</span><span>AI Product Operations Portfolio</span></a><nav class="nav" aria-label="主导航"><a href="index.html" data-page="home">作品集</a><a href="llm-eval.html" data-page="eval">LLM Lens</a><a href="feedback-insight.html" data-page="feedback">Signal Desk</a><a class="nav-cta" href="downloads/许强-北京理工大学-AI产品运营实习生.pdf">下载简历</a></nav></div></header>
+<header class="topbar"><div class="topbar-inner"><a class="brand" href="index.html" aria-label="许强 数据分析作品集首页"><span class="brand-mark">XQ</span><span>Data Analysis Portfolio</span></a><nav class="nav" aria-label="主导航"><a href="index.html" data-page="home">作品集</a><a href="llm-eval.html" data-page="eval">LLM Lens</a><a href="feedback-insight.html" data-page="feedback">Signal Desk</a><a class="nav-cta" href="downloads/许强-北京理工大学-数据分析实习生.pdf">下载简历</a></nav></div></header>
   <main class="page">
     <section class="hero case-hero">
-      <div><span class="eyebrow">Project 01 · LLM evaluation</span><h1 class="page-title">LLM Lens：把主观模型体验变成可复核的评测决策。</h1><p class="hero-lede">面向需要比较模型版本、定位 Bad Case 与建立回归基线的 AI 产品团队，将“感觉更好”拆解为统一维度、标准用例、原始证据和人工复核状态。</p><div class="hero-actions"><a class="button" href="#workbench">体验评测工作台 ↓</a><button class="button secondary" id="export-tests">导出测试集</button><button class="button ghost" id="export-arena">导出偏好样本</button></div></div>
-      <aside class="hero-card case-facts"><span class="status-pill"><span aria-hidden="true"></span>个人产品项目</span><strong>产品负责人 · AI 辅助实现</strong><p>我负责问题定义、评测框架、PRD、交互原型、数据分析和验证设计；使用 AI 辅助前端实现与数据处理。</p><div class="contact-list"><div class="contact-item"><span>资产</span><b>48 条结构化评测用例</b></div><div class="contact-item"><span>样本</span><b>120 条双语人类偏好样本</b></div><div class="contact-item"><span>状态</span><b>6条历史回复已评审 · 4条候选问题</b></div><div class="contact-item"><span>文档</span><a href="prd-llm-lens.md">查看 PRD ↗</a></div></div></aside>
+      <div><span class="eyebrow">Project 02 · LLM evaluation</span><h1 class="page-title">LLM Lens：大模型评测口径与偏好样本分析</h1><p class="hero-lede">面向需要比较模型版本、定位 Bad Case 与建立回归基线的 AI 产品团队，将“感觉更好”拆解为统一维度、标准用例、原始证据和人工复核状态。</p><div class="hero-actions"><a class="button" href="#workbench">体验评测工作台 ↓</a><button class="button secondary" id="export-tests">导出测试集</button><button class="button ghost" id="export-arena">导出偏好样本</button></div></div>
+      <aside class="hero-card case-facts"><span class="status-pill"><span aria-hidden="true"></span>个人产品项目</span><strong>评测设计与样本分析 · AI 辅助实现</strong><p>我负责问题定义、评测框架、PRD、交互原型、数据分析和验证设计；使用 AI 辅助前端实现与数据处理。</p><div class="contact-list"><div class="contact-item"><span>资产</span><b>48 条结构化评测用例</b></div><div class="contact-item"><span>样本</span><b>120 条双语人类偏好样本</b></div><div class="contact-item"><span>状态</span><b>6条历史回复已评审 · 4条候选问题</b></div><div class="contact-item"><span>文档</span><a href="prd-llm-lens.md">查看 PRD ↗</a></div></div></aside>
     </section>
 
 
@@ -36,7 +36,7 @@
       <div class="case-summary-grid">
         <article><span>目标用户</span><h3>AI 产品经理与模型评测协作角色</h3><p>需要在模型选型、版本回归或上线前验收中建立统一比较口径。</p></article>
         <article><span>产品问题</span><h3>模型体验主观，问题难以复现</h3><p>缺少统一维度、固定用例、原始响应与版本记录，讨论容易停留在印象。</p></article>
-        <article><span>我的角色</span><h3>产品负责人（AI 辅助实现）</h3><p>完成问题定义、PRD、8 维框架、用例设计、交互原型、数据抽样与验收口径。</p></article>
+        <article><span>我的角色</span><h3>评测设计与样本分析（AI 辅助实现）</h3><p>完成问题定义、PRD、8 维框架、用例设计、交互原型、数据抽样与验收口径。</p></article>
         <article><span>项目状态</span><h3>工作台、评审样例与复算脚本</h3><p>完成48条用例设计与120组偏好样本整理；已交付6条历史回复AI辅助评审、4条候选问题及改进建议。</p></article>
       </div>
     </section>
@@ -113,6 +113,6 @@
 
   <div class="drawer" id="badcase-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true"><div class="drawer-panel"><div class="drawer-head"><div><span class="eyebrow">Evidence review</span><h2 id="drawer-title" style="margin:10px 0 0">Bad Case 详情</h2></div><button class="icon-button" id="drawer-close" aria-label="关闭 Bad Case 详情">×</button></div><div id="drawer-content"></div></div></div>
   <footer class="footer"><div class="footer-inner"><span>数据：LMArena Human Preference 100k，访问于 2026-08-14</span><span><a href="prd-llm-lens.md">查看 PRD</a> · <a href="data-manifest.json">数据清单</a></span></div></footer>
-  <script src="arena_records.js?v=20260920"></script><script src="test_cases.js?v=20260920"></script><script src="workflow-core.js?v=20260920"></script><script src="common.js?v=20260920"></script><script src="llm-eval.js?v=20260920"></script>
+  <script src="arena_records.js?v=20260922"></script><script src="test_cases.js?v=20260922"></script><script src="workflow-core.js?v=20260922"></script><script src="common.js?v=20260922"></script><script src="llm-eval.js?v=20260922"></script>
 </body>
 </html>
