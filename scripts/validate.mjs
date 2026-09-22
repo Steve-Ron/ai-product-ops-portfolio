@@ -70,8 +70,10 @@ const pages = {
 const readme = read('README.md');
 const allPublicCopy = `${Object.values(pages).join('\n')}\n${readme}`;
 
-requireText('首页', pages['index.html'], '<title>许强｜AI 产品运营作品集</title>');
-requireText('首页', pages['index.html'], 'AI 产品运营实习生');
+requireText('首页', pages['index.html'], '<title>许强｜数据分析作品集</title>');
+requireText('首页', pages['index.html'], '数据分析实习生');
+requireText('首页', pages['index.html'], '产品／业务／商业');
+forbidText('公开内容', allPublicCopy, 'AI 产品运营实习生');
 requireText('首页', pages['index.html'], '北京理工大学数字经济硕士在读');
 requireText('首页', pages['index.html'], '全日制');
 requireText('首页', pages['index.html'], '成都文理学院');
@@ -84,16 +86,16 @@ forbidText('公开内容', allPublicCopy, '数字经济本科');
 requireText('首页', pages['index.html'], '周末授课');
 requireText('首页', pages['index.html'], '工作日可全勤 5 天');
 requireText('首页', pages['index.html'], '可连续实习 6 个月以上');
-requireText('首页', pages['index.html'], '产品定义');
-requireText('首页', pages['index.html'], 'AI 产品理解');
-requireText('首页', pages['index.html'], '用户洞察');
-requireText('首页', pages['index.html'], '快速验证');
+requireText('首页', pages['index.html'], '数据提取与整理');
+requireText('首页', pages['index.html'], '分类统计与呈现');
+requireText('首页', pages['index.html'], '问题诊断与建议');
+requireText('首页', pages['index.html'], '评测口径与复核');
 requireText('首页', pages['index.html'], '识别问题');
 requireText('首页', pages['index.html'], '个人产品项目');
 
 const expectedResumeLinks = [
-  'downloads/许强-北京理工大学-AI产品运营实习生.pdf',
-  'downloads/许强-北京理工大学-AI产品运营实习生.docx',
+  'downloads/许强-北京理工大学-数据分析实习生.pdf',
+  'downloads/许强-北京理工大学-数据分析实习生.docx',
 ];
 for (const resumeLink of expectedResumeLinks) {
   requireText('首页', pages['index.html'], resumeLink);
@@ -102,12 +104,12 @@ for (const resumeLink of expectedResumeLinks) {
 
 forbidText('公开内容', allPublicCopy, '拟入学');
 const applicationHeadline = pages['index.html'].match(/<h1>[\s\S]*?<\/h1>/)?.[0] || '';
-requireText('求职定位', applicationHeadline, 'AI 产品运营实习生');
+requireText('求职定位', applicationHeadline, '数据分析实习生');
 forbidText('求职定位', applicationHeadline, 'AI 产品经理实习生');
 forbidText('公开内容', allPublicCopy, 'AI Product Ops Portfolio');
 forbidText('公开内容', allPublicCopy, '许强-AI产品运营实习简历.pdf');
 forbidText('公开内容', allPublicCopy, 'resume.pdf');
-requireText('README', readme, 'AI 产品运营实习生');
+requireText('README', readme, '数据分析实习生');
 
 const llm = pages['llm-eval.html'];
 for (const expected of [
