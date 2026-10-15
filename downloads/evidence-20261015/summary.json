@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-15",
+  "sourceSnapshot": "2026-08-14",
+  "feedbackRecords": 156,
+  "titleAIReviewed": 156,
+  "labelDisagreements": 74,
+  "humanReviewed": 0,
+  "openSnapshot": 51,
+  "themes": [
+    {
+      "theme": "界面与对话流程",
+      "issues": 40,
+      "sample_pct": 25.64
+    },
+    {
+      "theme": "Agent/工具/搜索",
+      "issues": 23,
+      "sample_pct": 14.74
+    },
+    {
+      "theme": "模型与API连接",
+      "issues": 21,
+      "sample_pct": 13.46
+    },
+    {
+      "theme": "性能与稳定性",
+      "issues": 17,
+      "sample_pct": 10.9
+    },
+    {
+      "theme": "账号与权限",
+      "issues": 17,
+      "sample_pct": 10.9
+    },
+    {
+      "theme": "知识库与RAG",
+      "issues": 15,
+      "sample_pct": 9.62
+    },
+    {
+      "theme": "多媒体与语音",
+      "issues": 10,
+      "sample_pct": 6.41
+    },
+    {
+      "theme": "安装与升级",
+      "issues": 10,
+      "sample_pct": 6.41
+    },
+    {
+      "theme": "其他",
+      "issues": 3,
+      "sample_pct": 1.92
+    }
+  ],
+  "historicalPairs": 120,
+  "historicalReplies": 240,
+  "historicalRepliesAIReviewed": 24,
+  "candidateBadCases": 9,
+  "regressionDesignsReviewed": 48,
+  "apiCalls": 0,
+  "sqlQueries": 6,
+  "deterministicChecks": 4,
+  "deterministicFailures": 2,
+  "limitations": [
+    "标题级AI复核不是人工金标；分歧不是错误率。",
+    "历史回复为目的抽样，不用于模型排名或总体失败率。",
+    "48条为回归设计资产，没有被计为API执行结果。",
+    "状态为旧快照，不代表当前仍开放；没有真实DAU、留存、转化数据。"
+  ]
+}

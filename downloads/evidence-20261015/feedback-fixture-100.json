@@ -1,0 +1,502 @@
+[
+  {
+    "id": "OWUI-28563",
+    "title": "issue: PPTX attachment Preview renders the thumbnail rail but the main slide pane stays blank for larger decks",
+    "url": "https://github.com/open-webui/open-webui/issues/28563"
+  },
+  {
+    "id": "OWUI-28561",
+    "title": "issue: UI Scale shows Default instead of the inherited value when a system-wide default interface scale is set",
+    "url": "https://github.com/open-webui/open-webui/issues/28561"
+  },
+  {
+    "id": "OWUI-28559",
+    "title": "fix: reasoning \"Thinking...\" indicator and spinner never render when \"Fade Effect for Streaming Text\" is disabled",
+    "url": "https://github.com/open-webui/open-webui/issues/28559"
+  },
+  {
+    "id": "OWUI-28555",
+    "title": "issue: bug: OAuth 2.1 Dynamic/Static Client Registration generates HTTP redirect_uri instead of HTTPS when behind reverse proxy",
+    "url": "https://github.com/open-webui/open-webui/issues/28555"
+  },
+  {
+    "id": "OWUI-28553",
+    "title": "issue: RAG / Knowledge base ignored when tool calling is \"default\"",
+    "url": "https://github.com/open-webui/open-webui/issues/28553"
+  },
+  {
+    "id": "OWUI-28552",
+    "title": "issue: MCP Tool Server Verify skips OAuth flow entirely — sends unauthenticated POST, never initiates dynamic client registration or redirect to /authorize",
+    "url": "https://github.com/open-webui/open-webui/issues/28552"
+  },
+  {
+    "id": "OWUI-28547",
+    "title": "feat: \"Search Collection\" in knowledges filters folders",
+    "url": "https://github.com/open-webui/open-webui/issues/28547"
+  },
+  {
+    "id": "OWUI-28545",
+    "title": "feat: Tool-generated files as native in-chat download attachments (click = download) — with working solution",
+    "url": "https://github.com/open-webui/open-webui/issues/28545"
+  },
+  {
+    "id": "OWUI-28544",
+    "title": "feat: fallback to other connections",
+    "url": "https://github.com/open-webui/open-webui/issues/28544"
+  },
+  {
+    "id": "OWUI-28540",
+    "title": "feat: Option to globally disable specific builtin_tools or capabilities",
+    "url": "https://github.com/open-webui/open-webui/issues/28540"
+  },
+  {
+    "id": "OWUI-28539",
+    "title": "issue: note content can be overwritten with an empty document — Yjs seeding is client-side only and skipped when more than one session is joined",
+    "url": "https://github.com/open-webui/open-webui/issues/28539"
+  },
+  {
+    "id": "OWUI-28537",
+    "title": "issue: Docker example doesn't work",
+    "url": "https://github.com/open-webui/open-webui/issues/28537"
+  },
+  {
+    "id": "OWUI-28536",
+    "title": "feat: configurable token scope for Entra ID connection auth",
+    "url": "https://github.com/open-webui/open-webui/issues/28536"
+  },
+  {
+    "id": "OWUI-28530",
+    "title": "ci: feature requests are never auto-labeled, nothing applies the enhancement label",
+    "url": "https://github.com/open-webui/open-webui/issues/28530"
+  },
+  {
+    "id": "OWUI-28528",
+    "title": "issue: llama.cpp timings merged into usage inflates input_tokens total_tokens and cached_tokens",
+    "url": "https://github.com/open-webui/open-webui/issues/28528"
+  },
+  {
+    "id": "OWUI-28527",
+    "title": "feat: Cache-stable date/time variables for system prompts (prefix KV caching)",
+    "url": "https://github.com/open-webui/open-webui/issues/28527"
+  },
+  {
+    "id": "OWUI-28525",
+    "title": "bug: context compaction always uses hardcoded max_tokens=1000 for non-Ollama models",
+    "url": "https://github.com/open-webui/open-webui/issues/28525"
+  },
+  {
+    "id": "OWUI-28521",
+    "title": "feat: Reindex memories endpoint",
+    "url": "https://github.com/open-webui/open-webui/issues/28521"
+  },
+  {
+    "id": "OWUI-28514",
+    "title": "bug: Model editor stores arbitrary free text in meta.tts.voice (unvalidated)",
+    "url": "https://github.com/open-webui/open-webui/issues/28514"
+  },
+  {
+    "id": "OWUI-28513",
+    "title": "bug: API update of custom model returns 500 when access_grants is omitted",
+    "url": "https://github.com/open-webui/open-webui/issues/28513"
+  },
+  {
+    "id": "OWUI-28504",
+    "title": "bug: chat stats export always returns 0 for user/assistant message counts and an empty message map",
+    "url": "https://github.com/open-webui/open-webui/issues/28504"
+  },
+  {
+    "id": "OWUI-28502",
+    "title": "issue: Chat Completions to Responses conversion drops \"file\" content parts",
+    "url": "https://github.com/open-webui/open-webui/issues/28502"
+  },
+  {
+    "id": "OWUI-28500",
+    "title": "fix: collapsed sidebar rail pushed off screen, recoverable only by shrinking the window below the mobile breakpoint",
+    "url": "https://github.com/open-webui/open-webui/issues/28500"
+  },
+  {
+    "id": "OWUI-28498",
+    "title": "feat: Persistent Follow-Up Suggestions with Branch/New Chat Actions",
+    "url": "https://github.com/open-webui/open-webui/issues/28498"
+  },
+  {
+    "id": "OWUI-28492",
+    "title": "issue: Tool calls silently dropped and thought_signature lost with Google's OpenAI-compatible endpoint",
+    "url": "https://github.com/open-webui/open-webui/issues/28492"
+  },
+  {
+    "id": "OWUI-28487",
+    "title": "issue: generated images render blank in the Images playground when the frontend is on a different origin",
+    "url": "https://github.com/open-webui/open-webui/issues/28487"
+  },
+  {
+    "id": "OWUI-28419",
+    "title": "Image generation adds text despite image-only response request",
+    "url": "https://github.com/open-webui/open-webui/issues/28419"
+  },
+  {
+    "id": "OWUI-28418",
+    "title": "issue: Need to strip `reasoning_effort` param from OpenAI params, transitioning Completions to Responses API",
+    "url": "https://github.com/open-webui/open-webui/issues/28418"
+  },
+  {
+    "id": "OWUI-28413",
+    "title": "issue: Title generation stucks the model",
+    "url": "https://github.com/open-webui/open-webui/issues/28413"
+  },
+  {
+    "id": "OWUI-28412",
+    "title": "issue: v0.11.0 default pinned models are hidden in collapsed sidebar Models section",
+    "url": "https://github.com/open-webui/open-webui/issues/28412"
+  },
+  {
+    "id": "OWUI-28411",
+    "title": "bug: HEIC uploads: conversion skipped for image/heif and empty file.type, and converted JPEGs re-tagged as image/heic",
+    "url": "https://github.com/open-webui/open-webui/issues/28411"
+  },
+  {
+    "id": "OWUI-28402",
+    "title": "feat: Render Tool-Generated Files as Native Chat Attachments",
+    "url": "https://github.com/open-webui/open-webui/issues/28402"
+  },
+  {
+    "id": "OWUI-28400",
+    "title": "issue: Enabling the Memory tool causes conversation context loss from the first follow-up message",
+    "url": "https://github.com/open-webui/open-webui/issues/28400"
+  },
+  {
+    "id": "OWUI-28397",
+    "title": "bug: OpenAI Python client files.create() gets 405 because /api/v1/files requires a trailing slash",
+    "url": "https://github.com/open-webui/open-webui/issues/28397"
+  },
+  {
+    "id": "OWUI-28394",
+    "title": "fix: OpenAPI tool results skip every second inline data: URI",
+    "url": "https://github.com/open-webui/open-webui/issues/28394"
+  },
+  {
+    "id": "OWUI-28393",
+    "title": "feat: Run automatic context compaction asynchronously after response completion",
+    "url": "https://github.com/open-webui/open-webui/issues/28393"
+  },
+  {
+    "id": "OWUI-28385",
+    "title": "issue:Gemini 2.5 Flash exposes intermediate reasoning and tool-call content in chat UI when using function calling",
+    "url": "https://github.com/open-webui/open-webui/issues/28385"
+  },
+  {
+    "id": "OWUI-28382",
+    "title": "feat: Per-model chat background color",
+    "url": "https://github.com/open-webui/open-webui/issues/28382"
+  },
+  {
+    "id": "OWUI-28380",
+    "title": "issue: A message queued while a URL is attaching is never sent",
+    "url": "https://github.com/open-webui/open-webui/issues/28380"
+  },
+  {
+    "id": "OWUI-28378",
+    "title": "issue: An attached web page or YouTube video reaches the model with no content",
+    "url": "https://github.com/open-webui/open-webui/issues/28378"
+  },
+  {
+    "id": "OWUI-28377",
+    "title": "feat: Admin control over \"Full Context\" KB attachment mode on custom models",
+    "url": "https://github.com/open-webui/open-webui/issues/28377"
+  },
+  {
+    "id": "OWUI-28370",
+    "title": "issue: SearXNG web search returns no usable results (debug log shows only the base query URL)",
+    "url": "https://github.com/open-webui/open-webui/issues/28370"
+  },
+  {
+    "id": "OWUI-28361",
+    "title": "issue: Attaching a URL that fails reports nothing, and a failed YouTube transcript blames the knowledge base",
+    "url": "https://github.com/open-webui/open-webui/issues/28361"
+  },
+  {
+    "id": "OWUI-28356",
+    "title": "ci: dev fails its own Ruff Format check, so every backend PR inherits a red build",
+    "url": "https://github.com/open-webui/open-webui/issues/28356"
+  },
+  {
+    "id": "OWUI-28332",
+    "title": "issue: Bug reports stay unlabelled when the title prefix is added after the issue is opened",
+    "url": "https://github.com/open-webui/open-webui/issues/28332"
+  },
+  {
+    "id": "OWUI-28331",
+    "title": "issue: Image generation engine fails to recognize Base URL or improperly processes image creation when using function calling with legacy model settings",
+    "url": "https://github.com/open-webui/open-webui/issues/28331"
+  },
+  {
+    "id": "OWUI-28320",
+    "title": "bug: OAuth signout races with reactive auth guard added in v0.11.0, cancels redirect to IdP end_session_endpoint",
+    "url": "https://github.com/open-webui/open-webui/issues/28320"
+  },
+  {
+    "id": "OWUI-28319",
+    "title": "bug: MCP tool-server OAuth never requests access_type=offline, so Google MCP sessions are deleted every hour",
+    "url": "https://github.com/open-webui/open-webui/issues/28319"
+  },
+  {
+    "id": "OWUI-28317",
+    "title": "feat: Bring back multiple chat",
+    "url": "https://github.com/open-webui/open-webui/issues/28317"
+  },
+  {
+    "id": "OWUI-28316",
+    "title": "issue: Cannot update or add memory after changed embedding model",
+    "url": "https://github.com/open-webui/open-webui/issues/28316"
+  },
+  {
+    "id": "OWUI-28313",
+    "title": "feat: video generation support",
+    "url": "https://github.com/open-webui/open-webui/issues/28313"
+  },
+  {
+    "id": "OWUI-28305",
+    "title": "issue: a tool call whose id an earlier round reused is dropped, orphaning its result",
+    "url": "https://github.com/open-webui/open-webui/issues/28305"
+  },
+  {
+    "id": "OWUI-28298",
+    "title": "feat: Per-model admin control for user-configurable tools, skills and chat integrations",
+    "url": "https://github.com/open-webui/open-webui/issues/28298"
+  },
+  {
+    "id": "OWUI-28297",
+    "title": "feat: Restore admin model list reordering UI and support centrally managed pinned models",
+    "url": "https://github.com/open-webui/open-webui/issues/28297"
+  },
+  {
+    "id": "OWUI-28296",
+    "title": "issue: pyproject.toml \"all\" extra is missing OpenTelemetry packages that Docker installs by default",
+    "url": "https://github.com/open-webui/open-webui/issues/28296"
+  },
+  {
+    "id": "OWUI-28294",
+    "title": "feat: Admin-configurable default sidebar state for all users and devices",
+    "url": "https://github.com/open-webui/open-webui/issues/28294"
+  },
+  {
+    "id": "OWUI-28292",
+    "title": "bug: Memory context ordering in system prompt invalidates LLM KV cache on every turn",
+    "url": "https://github.com/open-webui/open-webui/issues/28292"
+  },
+  {
+    "id": "OWUI-28288",
+    "title": "issue: A standard channel's member list omits its owner, and lists nobody when a user and a group are both granted",
+    "url": "https://github.com/open-webui/open-webui/issues/28288"
+  },
+  {
+    "id": "OWUI-28286",
+    "title": "bug: Responses converter drops image detail, breaking strict OpenAI-compatible backends",
+    "url": "https://github.com/open-webui/open-webui/issues/28286"
+  },
+  {
+    "id": "OWUI-28285",
+    "title": "feat: Voice modality for Pipes — AI-like voice UX without a model",
+    "url": "https://github.com/open-webui/open-webui/issues/28285"
+  },
+  {
+    "id": "OWUI-28281",
+    "title": "feat: Move Toast for System Messages",
+    "url": "https://github.com/open-webui/open-webui/issues/28281"
+  },
+  {
+    "id": "OWUI-28279",
+    "title": "concept/feat: Customizable Human In The Loop - Tool approval flow inside Open WebUI via Filter Functions",
+    "url": "https://github.com/open-webui/open-webui/issues/28279"
+  },
+  {
+    "id": "OWUI-28273",
+    "title": "issue: A chat shared with you shows your own name and avatar as the author",
+    "url": "https://github.com/open-webui/open-webui/issues/28273"
+  },
+  {
+    "id": "OWUI-28271",
+    "title": "issue: Shared chat owner avatars request a hardcoded /api/v1 path and break in a split frontend and backend setup",
+    "url": "https://github.com/open-webui/open-webui/issues/28271"
+  },
+  {
+    "id": "OWUI-28269",
+    "title": "issue: A message from a deleted user renders the \"profile\" alt text instead of a fallback avatar",
+    "url": "https://github.com/open-webui/open-webui/issues/28269"
+  },
+  {
+    "id": "OWUI-28263",
+    "title": "issue: Referencing a chat shared with you returns \"No sources found\" and the chat is missing from the Reference Chats picker",
+    "url": "https://github.com/open-webui/open-webui/issues/28263"
+  },
+  {
+    "id": "OWUI-28261",
+    "title": "issue: Read-only shared folders accept chat drops that always fail, and writable shared folders show no drop indicator",
+    "url": "https://github.com/open-webui/open-webui/issues/28261"
+  },
+  {
+    "id": "OWUI-28259",
+    "title": "issue: Chat API errors render as \"[object Object]\" instead of the server message",
+    "url": "https://github.com/open-webui/open-webui/issues/28259"
+  },
+  {
+    "id": "OWUI-28258",
+    "title": "issue: Knowledge Base stops working after switching chats",
+    "url": "https://github.com/open-webui/open-webui/issues/28258"
+  },
+  {
+    "id": "OWUI-28257",
+    "title": "issue: Channel member counts include deleted users, and a DM with a deleted participant cannot be reopened",
+    "url": "https://github.com/open-webui/open-webui/issues/28257"
+  },
+  {
+    "id": "OWUI-28255",
+    "title": "feat: LLM can't list folders or tell which folder a chat is in",
+    "url": "https://github.com/open-webui/open-webui/issues/28255"
+  },
+  {
+    "id": "OWUI-28253",
+    "title": "issue: Add Access modal keeps offering groups that already have access",
+    "url": "https://github.com/open-webui/open-webui/issues/28253"
+  },
+  {
+    "id": "OWUI-28249",
+    "title": "issue: model whitelist accepts the same model ID twice",
+    "url": "https://github.com/open-webui/open-webui/issues/28249"
+  },
+  {
+    "id": "OWUI-28241",
+    "title": "issue: global default custom_params discarded when a model defines its own custom_params (shallow merge)",
+    "url": "https://github.com/open-webui/open-webui/issues/28241"
+  },
+  {
+    "id": "OWUI-28240",
+    "title": "issue: encrypted reasoning_details are replayed to a different model after an in-chat model switch, failing the turn",
+    "url": "https://github.com/open-webui/open-webui/issues/28240"
+  },
+  {
+    "id": "OWUI-28239",
+    "title": "issue: The chat feature \"Attach Knowledge\" is shown even if knowledge access is disabled",
+    "url": "https://github.com/open-webui/open-webui/issues/28239"
+  },
+  {
+    "id": "OWUI-28230",
+    "title": "feat: Show API Key Token Usage in Admin Analytics Dashboard",
+    "url": "https://github.com/open-webui/open-webui/issues/28230"
+  },
+  {
+    "id": "OWUI-28229",
+    "title": "feat: Option to disable external (Google) favicon fetching for citations and web search results",
+    "url": "https://github.com/open-webui/open-webui/issues/28229"
+  },
+  {
+    "id": "OWUI-28226",
+    "title": "issue: `EVALUATION_ARENA_MODELS` doesn't respect `ENABLE_PERSISTENT_CONFIG=False`",
+    "url": "https://github.com/open-webui/open-webui/issues/28226"
+  },
+  {
+    "id": "OWUI-28222",
+    "title": "issue: Notes page crashes when note md content is stored as dict/object instead of string",
+    "url": "https://github.com/open-webui/open-webui/issues/28222"
+  },
+  {
+    "id": "OWUI-28221",
+    "title": "feat: Web Push for installed PWA; OS notification while the app is fully closed",
+    "url": "https://github.com/open-webui/open-webui/issues/28221"
+  },
+  {
+    "id": "OWUI-28217",
+    "title": "issue: query_knowledge_files builtin tool function does not use knowledge_ids parameter given by LLM when multiple kb is attached to the model",
+    "url": "https://github.com/open-webui/open-webui/issues/28217"
+  },
+  {
+    "id": "OWUI-28215",
+    "title": "issue: v0.11.0 regression: aiodns/c-ares resolver intermittently stops resolving the `ollama` container name in Docker — chats fail with misleading \"Model not found\" (400)",
+    "url": "https://github.com/open-webui/open-webui/issues/28215"
+  },
+  {
+    "id": "OWUI-28213",
+    "title": "issue: Image attachments from parent chat are not passed to sub-agents",
+    "url": "https://github.com/open-webui/open-webui/issues/28213"
+  },
+  {
+    "id": "OWUI-28210",
+    "title": "feat: UI: Show Prompt processing in chat window -> i.e. (75%,82% etc on progress)",
+    "url": "https://github.com/open-webui/open-webui/issues/28210"
+  },
+  {
+    "id": "OWUI-28209",
+    "title": "feat: when `ENABLE_PERSISTENT_CONFIG=false`, disable editing in admin UI accordingly",
+    "url": "https://github.com/open-webui/open-webui/issues/28209"
+  },
+  {
+    "id": "OWUI-28207",
+    "title": "feat: Allow each user to enter their own Bearer / PAT token for MCP connection",
+    "url": "https://github.com/open-webui/open-webui/issues/28207"
+  },
+  {
+    "id": "OWUI-28204",
+    "title": "feat: Governance filter for chat — deterministic PII scanning, prompt injection detection, and policy enforcement via Pipelines",
+    "url": "https://github.com/open-webui/open-webui/issues/28204"
+  },
+  {
+    "id": "OWUI-28203",
+    "title": "issue: Infinite loading loop on sidebar after v0.11.0 upgrade (Hugging Face + Storage Bucket)",
+    "url": "https://github.com/open-webui/open-webui/issues/28203"
+  },
+  {
+    "id": "OWUI-28202",
+    "title": "issue: [BUG] Deactivating an Ollama Cloud model 500s /api/models (get_all_models: list.remove(x): x not in list)",
+    "url": "https://github.com/open-webui/open-webui/issues/28202"
+  },
+  {
+    "id": "OWUI-28201",
+    "title": "issue: OIDC auto redirecting does not work",
+    "url": "https://github.com/open-webui/open-webui/issues/28201"
+  },
+  {
+    "id": "OWUI-28199",
+    "title": "feat: Allow folders to set default-enabled Tools",
+    "url": "https://github.com/open-webui/open-webui/issues/28199"
+  },
+  {
+    "id": "OWUI-28198",
+    "title": "feat: Support metadata in OpenAI :::writing{...} blocks",
+    "url": "https://github.com/open-webui/open-webui/issues/28198"
+  },
+  {
+    "id": "OWUI-28189",
+    "title": "feat: Add a default-off option to restore the user menu in the chat header",
+    "url": "https://github.com/open-webui/open-webui/issues/28189"
+  },
+  {
+    "id": "OWUI-28181",
+    "title": "Workspace models with external API base_model_id return \"Model not found\" for non-admin users after v0.11.0 (#26905)",
+    "url": "https://github.com/open-webui/open-webui/issues/28181"
+  },
+  {
+    "id": "OWUI-28173",
+    "title": "perf: redis websocket manager: every instance decodes every emit",
+    "url": "https://github.com/open-webui/open-webui/issues/28173"
+  },
+  {
+    "id": "OWUI-28172",
+    "title": "perf: Redis websocket manager: the synchronous session pool blocks the worker's event loop",
+    "url": "https://github.com/open-webui/open-webui/issues/28172"
+  },
+  {
+    "id": "OWUI-28171",
+    "title": "perf: collapse the five per-request ASGI middleware layers into one",
+    "url": "https://github.com/open-webui/open-webui/issues/28171"
+  },
+  {
+    "id": "OWUI-28170",
+    "title": "perf: note co-editing re-broadcasts every edit once per participant and emits cursor updates with no rate limit",
+    "url": "https://github.com/open-webui/open-webui/issues/28170"
+  },
+  {
+    "id": "OWUI-28169",
+    "title": "perf: every message-level write re-reads and rewrites the entire chat, so long chats get progressively more expensive to stream into",
+    "url": "https://github.com/open-webui/open-webui/issues/28169"
+  }
+]

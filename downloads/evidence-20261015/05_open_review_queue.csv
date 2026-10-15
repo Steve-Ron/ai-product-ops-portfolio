@@ -1,0 +1,52 @@
+﻿id,review_theme,title,comments,triage_score,theme_review_rank,url
+OWUI-27982,知识库与RAG,issue: selecting a knowledge base in folder settings crashes when the folder data has no files key,4,78,1,https://github.com/open-webui/open-webui/issues/27982
+OWUI-28033,模型与API连接,"issue: POST /api/v1/models/sync fails with TypeError for any already-existing model, and returns HTTP 200 with []",4,63,1,https://github.com/open-webui/open-webui/issues/28033
+OWUI-28072,界面与对话流程,issue: Group member count in admin list does not refresh after toggling users in Edit Group modal,3,62,1,https://github.com/open-webui/open-webui/issues/28072
+OWUI-28316,知识库与RAG,issue: Cannot update or add memory after changed embedding model,3,62,2,https://github.com/open-webui/open-webui/issues/28316
+OWUI-28016,Agent/工具/搜索,Bug: Tool call displays green success icon when result contains an error,3,59,1,https://github.com/open-webui/open-webui/issues/28016
+OWUI-28052,性能与稳定性,bug: three lifespan background tasks are created without keeping a reference and can be garbage collected,3,59,1,https://github.com/open-webui/open-webui/issues/28052
+OWUI-28370,Agent/工具/搜索,issue: SearXNG web search returns no usable results (debug log shows only the base query URL),3,59,2,https://github.com/open-webui/open-webui/issues/28370
+OWUI-28394,Agent/工具/搜索,fix: OpenAPI tool results skip every second inline data: URI,3,59,3,https://github.com/open-webui/open-webui/issues/28394
+OWUI-28411,多媒体与语音,"bug: HEIC uploads: conversion skipped for image/heif and empty file.type, and converted JPEGs re-tagged as image/heic",3,59,1,https://github.com/open-webui/open-webui/issues/28411
+OWUI-28487,多媒体与语音,issue: generated images render blank in the Images playground when the frontend is on a different origin,3,59,2,https://github.com/open-webui/open-webui/issues/28487
+OWUI-28168,性能与稳定性,perf: THREAD_POOL_SIZE does not bound the thread pool most blocking work actually uses,1,56,2,https://github.com/open-webui/open-webui/issues/28168
+OWUI-28172,性能与稳定性,perf: Redis websocket manager: the synchronous session pool blocks the worker's event loop,1,56,3,https://github.com/open-webui/open-webui/issues/28172
+OWUI-28075,界面与对话流程,issue: unsaved changes in the Edit User Group modal persist after closing without saving,2,55,2,https://github.com/open-webui/open-webui/issues/28075
+OWUI-28085,Agent/工具/搜索,bug: Tool Rich-UI `embeds` silently fail to render when the embedded HTML contains an HTML entity (e.g. `&quot;`),2,55,4,https://github.com/open-webui/open-webui/issues/28085
+OWUI-28086,界面与对话流程,issue: bug: Open file button inside collection does not open the original file,2,55,3,https://github.com/open-webui/open-webui/issues/28086
+OWUI-28133,界面与对话流程,"issue: Creating a calendar event with the date cleared fails with an ""[object Object]"" toast",2,55,4,https://github.com/open-webui/open-webui/issues/28133
+OWUI-28135,界面与对话流程,"issue: ""Mark as unread"" does nothing in the Search chats modal",2,55,5,https://github.com/open-webui/open-webui/issues/28135
+OWUI-28240,模型与API连接,"issue: encrypted reasoning_details are replayed to a different model after an in-chat model switch, failing the turn",2,55,2,https://github.com/open-webui/open-webui/issues/28240
+OWUI-28263,界面与对话流程,"issue: Referencing a chat shared with you returns ""No sources found"" and the chat is missing from the Reference Chats picker",2,55,6,https://github.com/open-webui/open-webui/issues/28263
+OWUI-28288,账号与权限,"issue: A standard channel's member list omits its owner, and lists nobody when a user and a group are both granted",2,55,1,https://github.com/open-webui/open-webui/issues/28288
+OWUI-28320,账号与权限,"bug: OAuth signout races with reactive auth guard added in v0.11.0, cancels redirect to IdP end_session_endpoint",2,55,2,https://github.com/open-webui/open-webui/issues/28320
+OWUI-28500,界面与对话流程,"fix: collapsed sidebar rail pushed off screen, recoverable only by shrinking the window below the mobile breakpoint",2,55,7,https://github.com/open-webui/open-webui/issues/28500
+OWUI-28539,性能与稳定性,issue: note content can be overwritten with an empty document — Yjs seeding is client-side only and skipped when more than one session is joined,2,55,4,https://github.com/open-webui/open-webui/issues/28539
+OWUI-28553,知识库与RAG,"issue: RAG / Knowledge base ignored when tool calling is ""default""",2,55,3,https://github.com/open-webui/open-webui/issues/28553
+OWUI-28559,界面与对话流程,"fix: reasoning ""Thinking..."" indicator and spinner never render when ""Fade Effect for Streaming Text"" is disabled",2,55,8,https://github.com/open-webui/open-webui/issues/28559
+OWUI-27988,知识库与RAG,"issue: Knowledge reset endpoint leaves orphaned file rows, storage blobs, and per-file vector collections (inconsistent with sync/cleanup and file/remove)",1,51,4,https://github.com/open-webui/open-webui/issues/27988
+OWUI-28161,模型与API连接,issue: notification target rejects dotless internal hostnames like http://apprise:8000 even with ENABLE_LOCAL_WEB_FETCH enabled,1,51,3,https://github.com/open-webui/open-webui/issues/28161
+OWUI-28164,性能与稳定性,perf/issue: Every Socket.IO event scans its whole payload for binary data that is never there,1,51,5,https://github.com/open-webui/open-webui/issues/28164
+OWUI-28286,模型与API连接,"bug: Responses converter drops image detail, breaking strict OpenAI-compatible backends",1,51,4,https://github.com/open-webui/open-webui/issues/28286
+OWUI-28305,Agent/工具/搜索,"issue: a tool call whose id an earlier round reused is dropped, orphaning its result",1,51,5,https://github.com/open-webui/open-webui/issues/28305
+OWUI-28502,模型与API连接,"issue: Chat Completions to Responses conversion drops ""file"" content parts",1,51,5,https://github.com/open-webui/open-webui/issues/28502
+OWUI-28552,账号与权限,"issue: MCP Tool Server Verify skips OAuth flow entirely — sends unauthenticated POST, never initiates dynamic client registration or redirect to /authorize",1,51,3,https://github.com/open-webui/open-webui/issues/28552
+OWUI-28555,账号与权限,issue: bug: OAuth 2.1 Dynamic/Static Client Registration generates HTTP redirect_uri instead of HTTPS when behind reverse proxy,1,51,4,https://github.com/open-webui/open-webui/issues/28555
+OWUI-28561,界面与对话流程,issue: UI Scale shows Default instead of the inherited value when a system-wide default interface scale is set,1,51,9,https://github.com/open-webui/open-webui/issues/28561
+OWUI-28319,账号与权限,"bug: MCP tool-server OAuth never requests access_type=offline, so Google MCP sessions are deleted every hour",3,49,5,https://github.com/open-webui/open-webui/issues/28319
+OWUI-27987,知识库与RAG,"issue: Silent failures in background knowledge file processing: orphaned files, sync/diff re-upload loop, and a duplicate-content race that links zero or two copies",0,47,5,https://github.com/open-webui/open-webui/issues/27987
+OWUI-28255,Agent/工具/搜索,feat: LLM can't list folders or tell which folder a chat is in,2,45,6,https://github.com/open-webui/open-webui/issues/28255
+OWUI-28540,Agent/工具/搜索,feat: Option to globally disable specific builtin_tools or capabilities,1,44,7,https://github.com/open-webui/open-webui/issues/28540
+OWUI-28165,性能与稳定性,perf: last_active_at is written on every authenticated request by default,1,41,6,https://github.com/open-webui/open-webui/issues/28165
+OWUI-28166,性能与稳定性,perf: websocket heartbeat interval is hardcoded at 30s with no way to tune it,1,41,7,https://github.com/open-webui/open-webui/issues/28166
+OWUI-28167,性能与稳定性,perf: Redis-backed model pool is re-fetched and JSON-decoded several times per chat request,1,41,8,https://github.com/open-webui/open-webui/issues/28167
+OWUI-28169,性能与稳定性,"perf: every message-level write re-reads and rewrites the entire chat, so long chats get progressively more expensive to stream into",1,41,9,https://github.com/open-webui/open-webui/issues/28169
+OWUI-28170,性能与稳定性,perf: note co-editing re-broadcasts every edit once per participant and emits cursor updates with no rate limit,1,41,10,https://github.com/open-webui/open-webui/issues/28170
+OWUI-28199,Agent/工具/搜索,feat: Allow folders to set default-enabled Tools,1,41,8,https://github.com/open-webui/open-webui/issues/28199
+OWUI-28221,安装与升级,feat: Web Push for installed PWA; OS notification while the app is fully closed,1,41,1,https://github.com/open-webui/open-webui/issues/28221
+OWUI-28393,性能与稳定性,feat: Run automatic context compaction asynchronously after response completion,1,41,11,https://github.com/open-webui/open-webui/issues/28393
+OWUI-28544,模型与API连接,feat: fallback to other connections,1,41,6,https://github.com/open-webui/open-webui/issues/28544
+OWUI-28545,Agent/工具/搜索,feat: Tool-generated files as native in-chat download attachments (click = download) — with working solution,1,41,9,https://github.com/open-webui/open-webui/issues/28545
+OWUI-28547,知识库与RAG,"feat: ""Search Collection"" in knowledges filters folders",1,41,6,https://github.com/open-webui/open-webui/issues/28547
+OWUI-28171,性能与稳定性,perf: collapse the five per-request ASGI middleware layers into one,0,37,12,https://github.com/open-webui/open-webui/issues/28171
+OWUI-28173,性能与稳定性,perf: redis websocket manager: every instance decodes every emit,0,37,13,https://github.com/open-webui/open-webui/issues/28173

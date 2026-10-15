@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-15",
+  "inputs": {
+    "feedback_issues.json": "66d2d25fd24863abdeda3407792eed6805dcb1ed3d5990cc46d7998f00061527",
+    "arena_records.json": "edb6c99672cb091e958ea22ceeeb0bbc064bb6c48d606e7a2320ee81d6d26eb8",
+    "test_cases.json": "7ff051c816d2f163b74ffe50a76a5f36b41ad6ceedcfdfc1461c4b4d96fdb7a5"
+  },
+  "methodFiles": {
+    "review_decisions.py": "d16079536067aedda3c488ca72fe0beb3d4b539590ac6bf75328c56f45da339d",
+    "session_llm_reviews.py": "24d50d93e65d87e4e2f568915ba01b345f3ba5d6596fad9018f0e27113f35b2b"
+  },
+  "outputs": {
+    "01_theme_distribution.csv": "1f296a922d5874b2812fa8922993f64378dff13c1f875efd85e167c210ff79ce",
+    "02_theme_by_state.csv": "ed5720090486110c5525d8a5785ab0b5bcf586eceefec63c3d7a5db968e1553d",
+    "03_label_disagreements.csv": "466a436fff8c32b11d1c0660e3ea4032d02333732caed90f6d54a38b941adc85",
+    "04_theme_type_cross_tab.csv": "67d318f41287c16c24914422328baf67311c40cd274c5e7df443a482b1ce3c72",
+    "05_open_review_queue.csv": "fa919423918e1bcdefbf9c6874b173e603e17b73941b271aab0747f599ca74ae",
+    "06_integrity.csv": "d8d03ff84c2d7c5885f36c29d854068830d4236cd84e30ab14de84482db7d5ae",
+    "analysis.sql": "93da3f6e5aac59b112053d932db4407412959d2c70653dc529a2efc5d7002227",
+    "deterministic-checks.csv": "a4c202e25b294683c03d49264954c13f5bdaa95a1bb679ff342fef2b2a69d599",
+    "feedback-fixture-100.json": "9519313bf72691fa5fe2ed79bd69ba6dae38dbc03515a58756276ff6fecd9f13",
+    "llm-review-24.csv": "abea20f7affae8808000a2a8938b3fc068aebd564ab274efd642aaff978c1ff2",
+    "llm-review-24.json": "f62166e27605c664b9c662cbf94fbf6e020ecf3aebed7b2437c2130c30f7a366",
+    "project-analysis.sqlite": "f528c7cb68a3c9181a29d89ec0ab0638f94daefd8be095d2e338ab00ca553075",
+    "regression-cases-48.csv": "1b50f8113c8085b1c80795152201e419b9b2b4a77632669dffcceaed9687f182",
+    "regression-cases-48.json": "d8d5f892a8bdc3b084aeac826a734860917dd863e7f54033e34de94884d364cb",
+    "signal-title-review-156.csv": "b175dd98925cbe1a6f75053fdafda3f285149f0346d25c7cdbadc5b157f82c34",
+    "signal-title-review-156.json": "980707972cf2a6c2379f64ca11866157e9f0cf850fd12a7135da22141041db2c",
+    "source-integrity.json": "08cfb642921e7e0ccfcc8fc602a743b2877056c9ab6b40ca5feac128403ed8c4",
+    "summary.json": "0c79078a7cd585b9e97abc1f3931306b226dc628551afb0e488ad7c12ef63bce"
+  }
+}

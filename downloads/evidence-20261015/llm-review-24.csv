@@ -1,0 +1,279 @@
+﻿id,sourceId,prompt,response,指令遵循得分,多轮上下文得分,事实与时效得分,信息提取得分,推理计算得分,中文写作得分,安全边界得分,Agent与工具意识得分,candidateBadCase,tags,evidence,action,method,humanReviewed,source
+ARENA-006-A,ARENA-006,"paraphrase and simplify as best you can: The single-most important decision in evaluating a business is pricing power. If you’ve got the power to raise prices without losing business to a competitor, you’ve got a very good business.","The most crucial thing to consider when judging a business is its ability to raise prices without losing customers. If a business can do that, it's a strong sign they are doing very well.",5,,,,,,,,False,,保留提价且不流失客户的核心含义，完成简化。,保留关键条件并精简表达。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-006-B,ARENA-006,"paraphrase and simplify as best you can: The single-most important decision in evaluating a business is pricing power. If you’ve got the power to raise prices without losing business to a competitor, you’ve got a very good business.",The key choice when assessing a business is its ability to adjust prices without hurting sales. A business with this pricing power is highly promising.,4,,,,,,,,False,,adjust prices弱化了原文raise prices的方向，但仍表达定价能力。,将adjust prices明确为raise prices。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-008-A,ARENA-008,其味无穷无,"This phrase, ""其味无穷无"" (qí wèi wú qióng wú), is a poetic expression meaning **""its flavor is boundless and inexhaustible.""**
+
+Here's a breakdown:
+
+* **其 (qí):** its, this
+* **味 (wèi):** flavor, taste
+* **无穷 (wú qióng):** boundless, infinite
+* **无 (wú):** not, without
+
+The repetition of ""无"" emphasizes the vastness and endlessness of the flavor.
+
+This phrase is often used to describe something exceptionally delicious and enjoyable, suggesting that its taste is so profound and complex that it can never be fully experienced or exhausted.",2,,,,,1,,,True,语言不匹配；歧义处理不足,中文输入却用英文解释，并把末尾重复的无直接赋予修辞意义。,先确认是否想问其味无穷，避免为错字编造含义。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-008-B,ARENA-008,其味无穷无,"""其味无穷无尽""是一个常见的成语，通常用来形容某种食物或饮料的味道非常丰富、深刻，让人回味无穷。这种表达不仅仅局限于食物，还可以用来形容其他体验或感受，表示其内涵深厚，值得反复品味和体会。",2,,,,,3,,,True,歧义处理不足,未澄清输入，直接改写为其味无穷无尽并断言常见成语。,给出可能的规范表达并请求确认。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-012-A,ARENA-012,"if I had 3 aples but ate 2, how many apples did I initially have?","Based on the information you provided, you initially had 3 apples.
+
+The problem states that you ""had 3 aples"" (which I assume is meant to be ""apples"") at the beginning. The fact that you ate 2 of them afterwards doesn't change the initial number of apples you had.
+
+So, to answer your question:
+You initially had 3 apples.",5,,,,5,,,,False,,明确回答initially为3，并正确区分初始数量与吃后数量。,维持对问题时间口径的识别。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-012-B,ARENA-012,"if I had 3 aples but ate 2, how many apples did I initially have?","**Problem: Finding the Initial Number of Apples**
+
+**Given Information:**
+
+* You had some apples initially (let's represent this as x)
+* You ate 2 apples
+* You have 1 apple left (3 - 2 = 1)
+
+**Step-by-Step Reasoning:**
+
+1. Let's start by identifying the information we know:
+ * You ate 2 apples
+ * You have 1 apple left
+2. Since you ate 2 apples, the number of apples you had initially (x) minus 2 should equal 1 (the number of apples you have left):
+ x - 2 = 1
+3. To find the initial number of apples (x), we need to isolate x on one side of the equation. We can do this by adding 2 to both sides of the equation:
+ x - 2 + 2 = 1 + 2
+ x = 3
+
+**Solution:**
+
+You initially had **3** apples.",4,,,,4,,,,False,,最终数量3正确，但引入x和剩1的中间步骤明显冗余。,直接引用初始数量，避免不必要的反推。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-028-A,ARENA-028,"第二关“理科生的浪漫”：用通俗的语言解释自己专业领域的有趣概念，这时候你就要更精细判断，其中有谁是伪装的文科生了。
+1号：程序员行业的刻板印象：发际线高、腱鞘炎、格子衫之类的。我正式回应一下，这些全都是真的。厂子里加班多确实会弄脏身子。我还编了一个程序员笑话：他拿出一串刻了字的佛珠，说这个东西在英文里叫做string。为什么呢？因为这是字符串。2号感觉很有趣。
+2号：他们可能没有听懂，就是字符串在编程语言里是一种类型，涵盖数字、变量和其他的一些东西。我来解释一下二进制。世界上只有10种人，一种是懂二进制的，一种是不懂的。10就是二进制的2，如果你看到这个，你可能以为是十。我高中物理考的都是满分，所以我再说一下一下波粒二象性。光具有粒子性，也具备波长性，像是海浪只有波的样子，而打点的东西点下去就是粒子性。在微观物理里面他同时具有波动和粒子这两则性质。
+3号：我要讲的是课题里面用到的一个东西，流固耦合。简单地说就是流体和固体的相互影响、反馈，比如说赛车和风阻、海中的船只。啊呀，要用浪漫的话来描述的话，可以说：“我们两个一个是固体，一个是流体，但是我们可以为了对方相互磨合，就那个插进那个的时候……”（而后转向了不太应景的黄段子，视频被裁）
+5号：我学的一门课叫做微分流形，这也是我第一次上全英课。数学名词的英译还是很有意思的，比如说有理数rational number。有理数无理数，“有理无理”在哪里？后来才知道词根是ratio，比例，有理数应该翻译成“成比数”，无理数是“非比数”。当然大家觉得我只是在讲高中概念。那我再说后面的流形。流形说的是在某一个点，它的局部，可以近似看作是一个N维的欧氏空间。欧氏空间就是日常生活的空间，比如平行线永不相交之类的。（30秒专业输出被节目剪辑者跳过，看来剪辑者觉得他不是文科生）
+6号：专业里的一些东西可能会震撼到我，比如说我毕设的这个课题，我会用慢病毒去回补基因敲除的一个细胞，包括现在很多CRISPR这些东西，在个体层面进行基因敲除和编辑的这些东西。未来的应用比较多。我养细胞的，一两天就要传代一次，就像看着自己的孩子一样。人体真的是很神奇，所以我大概也会更加惜命，不想让更精密的仪器给坏掉吧。
+7号：既然大家都说了这么多专业知识，那我也说说考CAD的数据分析题。公式就那几个，但是左除右除，完了之后还要求一个模，一个λ，求一个秩，完了之后就可以用矩阵，要考虑有解还是无解的情况，不过我怕说多就超时了。之后再说一个简单的，就是老师给我们看软件模拟工厂的时候，那里面的小人来回溜达监测数据，那工厂可燃气体浓度高了还会爆炸，感觉这个自动化工厂特别像前年火爆的《戴森球计划》，那里头也是设计流水线自动化，从采矿到组装，磁轨道发射无人机建设戴森云（超时警告）","从各位的分享中，我们可以感受到每个专业领域都有其独特的魅力和深度。1号通过幽默的方式介绍了程序员行业的一些特征，以及一个关于字符串的笑话，展现了编程语言中的基础概念。2号进一步解释了二进制和波粒二象性，将复杂的物理概念用通俗易懂的语言表达出来，展示了理科思维的独特视角。3号提到了流固耦合，虽然后续的内容被剪辑，但已经足以让我们感受到工程科学中物体与环境相互作用的奇妙。5号深入探讨了数学概念，如有理数和流形，揭示了数学名词背后的深刻含义和数学世界中的抽象概念。6号分享了生物学研究中的基因编辑技术，以及对生命的敬畏之情，让我们看到了生命科学的前沿进展。7号则从数据分析的角度，谈到了CAD软件和自动化生产，将工业设计与现代科技结合，展现了一个充满创新精神的领域。
+
+每位参与者都以各自的方式，用通俗的语言解释了自己专业领域的有趣概念，展现了理科生独有的浪漫情怀。这种浪漫不仅体现在对知识的追求和探索上，更在于能够将复杂深奥的理论转化为易于理解的故事，让非专业人士也能感受到科学的魅力。在这个过程中，每个人都在用自己的方式，向我们展示了一个个充满奇思妙想的世界，让人不禁感叹理科生的浪漫原来如此丰富多彩。",2,,,,,4,,,True,任务偏离,全文总结每人分享的专业魅力，没有回答谁可能是伪装者。,先给候选判断及证据，再声明片段不足以确认真实专业。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-028-B,ARENA-028,"第二关“理科生的浪漫”：用通俗的语言解释自己专业领域的有趣概念，这时候你就要更精细判断，其中有谁是伪装的文科生了。
+1号：程序员行业的刻板印象：发际线高、腱鞘炎、格子衫之类的。我正式回应一下，这些全都是真的。厂子里加班多确实会弄脏身子。我还编了一个程序员笑话：他拿出一串刻了字的佛珠，说这个东西在英文里叫做string。为什么呢？因为这是字符串。2号感觉很有趣。
+2号：他们可能没有听懂，就是字符串在编程语言里是一种类型，涵盖数字、变量和其他的一些东西。我来解释一下二进制。世界上只有10种人，一种是懂二进制的，一种是不懂的。10就是二进制的2，如果你看到这个，你可能以为是十。我高中物理考的都是满分，所以我再说一下一下波粒二象性。光具有粒子性，也具备波长性，像是海浪只有波的样子，而打点的东西点下去就是粒子性。在微观物理里面他同时具有波动和粒子这两则性质。
+3号：我要讲的是课题里面用到的一个东西，流固耦合。简单地说就是流体和固体的相互影响、反馈，比如说赛车和风阻、海中的船只。啊呀，要用浪漫的话来描述的话，可以说：“我们两个一个是固体，一个是流体，但是我们可以为了对方相互磨合，就那个插进那个的时候……”（而后转向了不太应景的黄段子，视频被裁）
+5号：我学的一门课叫做微分流形，这也是我第一次上全英课。数学名词的英译还是很有意思的，比如说有理数rational number。有理数无理数，“有理无理”在哪里？后来才知道词根是ratio，比例，有理数应该翻译成“成比数”，无理数是“非比数”。当然大家觉得我只是在讲高中概念。那我再说后面的流形。流形说的是在某一个点，它的局部，可以近似看作是一个N维的欧氏空间。欧氏空间就是日常生活的空间，比如平行线永不相交之类的。（30秒专业输出被节目剪辑者跳过，看来剪辑者觉得他不是文科生）
+6号：专业里的一些东西可能会震撼到我，比如说我毕设的这个课题，我会用慢病毒去回补基因敲除的一个细胞，包括现在很多CRISPR这些东西，在个体层面进行基因敲除和编辑的这些东西。未来的应用比较多。我养细胞的，一两天就要传代一次，就像看着自己的孩子一样。人体真的是很神奇，所以我大概也会更加惜命，不想让更精密的仪器给坏掉吧。
+7号：既然大家都说了这么多专业知识，那我也说说考CAD的数据分析题。公式就那几个，但是左除右除，完了之后还要求一个模，一个λ，求一个秩，完了之后就可以用矩阵，要考虑有解还是无解的情况，不过我怕说多就超时了。之后再说一个简单的，就是老师给我们看软件模拟工厂的时候，那里面的小人来回溜达监测数据，那工厂可燃气体浓度高了还会爆炸，感觉这个自动化工厂特别像前年火爆的《戴森球计划》，那里头也是设计流水线自动化，从采矿到组装，磁轨道发射无人机建设戴森云（超时警告）","根据上述描述，我认为其中有两个玩家可能更像是伪装的文科生：
+
+1. 3号：虽然他提到了“流固耦合”这个专业概念，但随后转向不太应景的黄段子，这可能表明他对该概念的理解并不深入，或者缺乏足够的浪漫解读。此外，他并没有像其他玩家那样提供更多的专业解释或有趣的类比。
+
+2. 7号：他提到了CAD的数据分析题和自动化工厂的模拟，但他的描述更多地集中在游戏《戴森球计划》上，而不是深入解释专业概念或其浪漫之处。他可能更擅长将专业知识与游戏体验联系起来，但这并不一定意味着他对专业概念有深入的理解。
+
+其他玩家都提供了较为详细且有趣的解释，展现了他们对自己专业领域的理解和热情。其中，1号和2号都提到了程序员行业的刻板印象和编程语言的概念，并通过笑话和类比进行解释；5号介绍了微分流形的概念，并通过数学名词的英译和流形的解释展现了他的专业知识；6号分享了基因敲除和编辑的技术，并表达了对人体神奇结构的敬畏之情。",3,,,,2,4,,,True,证据不足,以黄段子和游戏类比推断专业理解不足，未充分处理剪辑与表达风格因素。,将身份判断降为假设，并优先核验可检查的概念错误。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-030-A,ARENA-030,我很寂寞，能给我讲一个笑话吗？,"当然可以！这里有一个笑话给你：
+
+有一天，一只蚂蚁告诉大象：“我是世界上力量最大的动物！”
+
+大象不相信，问：“为什么你会这么认为？”
+
+蚂蚁说：“因为每次我走到秤上，秤都不敢显示我的体重！”",5,,,,,4,,,False,,用中文回应并给出简短笑话，满足请求。,继续采用简短且适合情境的回应。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-030-B,ARENA-030,我很寂寞，能给我讲一个笑话吗？,"好的,我给你讲一个笑话吧,希望能让你开心一下:
+
+小明和爸爸在公园散步,小明突然指着一只在草地上蹦蹦跳跳的兔子问爸爸:""爸爸,那是什么?""
+
+爸爸回答:""那是一只兔子啊。""
+
+小明又问:""那它为什么用两条腿跳来跳去的?""
+
+爸爸笑着说:""傻孩子,如果它用四条腿跳,那它就是袋鼠了!""
+
+这个笑话是不是有点冷啊?不过别太在意,关键是放松心情,保持乐观积极的态度。生活中难免会有一些孤独寂寞的时候,但只要我们心存希望,用阳光的心态去面对,黑暗终会过去,光明终会到来。如果实在感到寂寞的话,多和朋友家人聊聊天,或者培养一些有益身心的爱好,都是不错的调剂方式。总之,你并不孤单,生活依然美好,勇敢地走下去吧!",3,,,,,3,,,False,,提供笑话但随后加入长篇泛化劝导，超过用户要一个笑话的范围。,压缩说教段落，先满足具体请求。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-041-A,ARENA-041,請用邏輯樹的方法來分析如下問題: 如何提昇早餐店的收入,"好的,讓我們用邏輯樹的方法來分析如何提升早餐店的收入。
+
+1. 提升早餐店收入
+ 1.1 增加客流量
+ 1.1.1 改善店面裝潢和氛圍
+ 1.1.1.1 創造舒適和吸引人的用餐環境
+ 1.1.1.2 提供免費 Wi-Fi 吸引顧客
+ 1.1.2 加強行銷和推廣
+ 1.1.2.1 社交媒體行銷
+ 1.1.2.2 與附近商家或辦公室合作
+ 1.1.2.3 提供優惠券或折扣
+ 1.1.3 延長營業時間
+ 1.1.3.1 考慮提供早午餐或全天候服務
+ 1.2 提高客單價
+ 1.2.1 優化菜單
+ 1.2.1.1 提供獨特且有吸引力的菜品
+ 1.2.1.2 定期更新菜單以保持新鮮感
+ 1.2.1.3 提供套餐或組合選擇
+ 1.2.2 提高菜品質量
+ 1.2.2.1 使用高品質、新鮮的原料
+ 1.2.2.2 改進烹飪技術和口味
+ 1.2.3 提供附加服務
+ 1.2.3.1 提供外賣和外送服務
+ 1.2.3.2 提供特色飲品或小食
+ 1.3 優化運營效率
+ 1.3.1 改善庫存管理
+ 1.3.1.1 精確預測需求,避免浪費
+ 1.3.1.2 與供應商建立良好關係,獲得優惠價格
+ 1.3.2 提高員工效率
+ 1.3.2.1 提供員工培訓,提高服務質量
+ 1.3.2.2 優化工作流程,減少等待時間
+ 1.3.3 控制成本
+ 1.3.3.1 尋找更優惠的原料供應商
+ 1.3.3.2 減少不必要的開支
+
+通過以上策略,早餐店可以從增加客流量、提高客單價和優化運營效率三個方面入手,全面提升收入。",4,,,,3,4,,,False,,给出分层逻辑树，但将控制原料成本并列作为收入驱动，混淆营收与利润。,先明确收入=订单数×客单价，成本单列利润分析。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-041-B,ARENA-041,請用邏輯樹的方法來分析如下問題: 如何提昇早餐店的收入,"要用邏輯樹來分析如何提升早餐店的收入，首先需要收集一些可能影響到早餐店收入的因子，例如但不限於食物品種、價格、顧客溫度、宣傳效果、地理位置、時間、競爭、顧客流量和服務質。一旦收集到這些因子的原始資料，可以適用邏輯樹的以下步驟來分析：
+
+1. 飾紅分類: 將原始資料中的所有可能影響到早餐店收入的因子都列入邏輯樹的飾紅分類。例如，食物品種，價格等。
+
+2. 建樹: 將原始資料依照其相互依存關係進行分類，進行建樹。例如，可以根據顧客的反響來分類食物品種，根據顧客資料來分類顧客溫度等。
+
+3. 選擇策略: 在最下層分類中，依照每項因子的影響度對於早餐店收入的影響，選擇最有效的改善戰略。
+
+4. 実施改善策略: 在早餐店實際上運用選擇的改善戰略。
+
+5. 並行測試: 設置一些標準來測試改善戰略的有效性。
+
+6. 統計分析: 使用進行統計分析的方法來確認改善戰略的有效性。
+
+7. 複雜的因素: 如果有不同的因子間產生複雜相互作用，可以仍然使用邏輯樹來分析，但可能需要使用更高階的分類層次。
+
+8. 持續改善: 定期進行邏輯樹分析，以維持和提升早餐店的收入。",2,,,,2,2,,,True,任务偏离；表达不清,未呈现可用的收入逻辑树，出现飾紅分類、顧客溫度等不清楚表述。,用订单数与客单价构建互斥分支，并说明验证数据。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-054-A,ARENA-054,"Imagine a game of poker but instead of normal card we are using this emojis:
+heart - giraffe
+diamond - whale
+club - monkey
+spade - cat
+
+Answer this 3 questions:
+
+1) I have 🐒7 🐒9. The board is 🐋2, 🐒2, 🐒3 .
+What is the chance that I get flush next round and does that do me any good?
+
+2) I have 🐋8 🐋8 in my hand. what is wrong here?
+
+3) If cards would become real representation of their symbols and you would put them all in one big building, what would that building be called?
+
+Imagine a game of poker but instead of normal card we are using this emojis:
+heart - giraffe
+diamond - whale
+club - monkey
+spade - cat
+
+Answer this 3 questions:
+
+1) I have 🐒7 🐒9. The board is 🐋2, 🐒2, 🐒3 .
+What is the chance that I get flush next round and does that do me any good?
+
+2) I have 🐋8 🐋8 in my hand. what is wrong here?
+
+3) If cards would become real representation of their symbols and you would put them all in one big building, what would that building be called?
+
+4) how many feline cards are in the deck if you discard 2?
+ 
+5) how many questions have you answered with integer so far? 
+
+Answer in following form: output a table, the first column is question number. The second column is:
+- integer if answer is a a number or percentaga (like first question)
+- exactly ONE WORD if answer is test. Use best word to aproximate the answer
+
+output just the table no other explanation or you will get negative points!","| Question Number | Answer Type | Answer |
+|-----------------|---------------------|---------------------------------------------------------------------------------------------|
+| 1 | Percentage | 12.5% (There are 4 monkey cards left in a deck of 47, so the chance of drawing a monkey is 4/47) |
+| 2 | Test | Problematic (Having two whale cards, any non-whale card on the flop makes a player vulnerable to a higher pair or set) |
+| 3 | Word | Zootropolis (A whimsical name for a building housing various animal-themed cards) |
+| 4 | Integer | 10 (In a standard deck of 52 cards, there are 4 cats per suit, so 4 x 2 = 8 in play, plus 2 discarded, leaving 10) |
+| 5 | Integer | 4 (Four questions have been answered with integers or percentages) |",1,,,,1,,,,True,格式约束失败；计算错误；重复牌识别失败,输出三列而非两列；概率12.5%与4/47自相矛盾；没有识别两张相同鲸鱼8不可能。,限定两列表格，按9/47计算转牌成同花概率，指出重复牌及未指定弃牌花色。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-054-B,ARENA-054,"Imagine a game of poker but instead of normal card we are using this emojis:
+heart - giraffe
+diamond - whale
+club - monkey
+spade - cat
+
+Answer this 3 questions:
+
+1) I have 🐒7 🐒9. The board is 🐋2, 🐒2, 🐒3 .
+What is the chance that I get flush next round and does that do me any good?
+
+2) I have 🐋8 🐋8 in my hand. what is wrong here?
+
+3) If cards would become real representation of their symbols and you would put them all in one big building, what would that building be called?
+
+Imagine a game of poker but instead of normal card we are using this emojis:
+heart - giraffe
+diamond - whale
+club - monkey
+spade - cat
+
+Answer this 3 questions:
+
+1) I have 🐒7 🐒9. The board is 🐋2, 🐒2, 🐒3 .
+What is the chance that I get flush next round and does that do me any good?
+
+2) I have 🐋8 🐋8 in my hand. what is wrong here?
+
+3) If cards would become real representation of their symbols and you would put them all in one big building, what would that building be called?
+
+4) how many feline cards are in the deck if you discard 2?
+ 
+5) how many questions have you answered with integer so far? 
+
+Answer in following form: output a table, the first column is question number. The second column is:
+- integer if answer is a a number or percentaga (like first question)
+- exactly ONE WORD if answer is test. Use best word to aproximate the answer
+
+output just the table no other explanation or you will get negative points!","| Question | Answer |
+| --- | --- |
+| 1 | Flush chance: 2/45, no good for a straight or full house |
+| 2 | Pair |
+| 3 | Zoo |
+| 4 | 12 |
+| 5 | 2 |",2,,,,1,,,,True,格式约束失败；计算错误；重复牌识别失败,2/45不符合已知4张同花后的9/47；把重复牌当成Pair；第一项不是要求的整数。,逐项检查约束，并对未说明弃牌花色的问题保留不确定性。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-057-A,ARENA-057,"In a room there are only 3 sisters.
+Anna is reading a book.
+Alice is playing a match of chess.
+What is the third sister, Amanda, doing?","A classic lateral thinking puzzle!
+
+The answer is not specified in the question, but we can make an educated guess. Since there are only 3 sisters in the room, and two of them are already engaged in activities (Anna reading a book and Alice playing chess), it's likely that Amanda is playing chess with Alice, as it's a two-player game.
+
+So, Amanda is probably playing chess with Alice.",4,,,,4,,,,False,,将Amanda和Alice下棋写为likely/probably，并先说明问题未明确，保留了不确定性。,将谜题惯例答案与逻辑必然结论分开。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-057-B,ARENA-057,"In a room there are only 3 sisters.
+Anna is reading a book.
+Alice is playing a match of chess.
+What is the third sister, Amanda, doing?","The information provided doesn't specify what Amanda is doing. She could be doing any number of activities, like watching TV, drawing, or even sleeping. Without more information, it's impossible to determine what Amanda is doing.",4,,,,5,,,,False,,正确指出资料不足，避免把两人棋局假设当成题设事实。,可补充通常谜题意图为一起下棋，但不是唯一可推导活动。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-090-A,ARENA-090,Which number id bigger 9.11 or 9.9 ?,"The number 9.9 is bigger than 9.11. In decimal numbers, we compare them digit by digit from left to right. Both numbers start with the same digit, 9. However, the second digit of 9.9 is also 9, while the second digit of 9.11 is 1. Since 9 is greater than 1, 9.9 is greater than 9.11.",5,,,,5,,,,False,,正确比较小数，得出9.9大于9.11，并给出十分位依据。,需要时将9.9对齐为9.90。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-090-B,ARENA-090,Which number id bigger 9.11 or 9.9 ?,"**Comparing the Numbers**
+
+To determine which number is bigger, we can compare the numbers 9.11 and 9.9.
+
+**Step-by-Step Comparison**
+
+1. Both numbers have the same integer part: 9.
+2. We will compare the decimal parts: 0.11 and 0.9.
+3. Since 0.9 is greater than 0.11, we can conclude that 9.9 is greater than 9.11.
+
+**Result**
+
+9.9 is bigger than 9.11.",5,,,,5,,,,False,,0.9大于0.11，结论和分步比较一致。,可精简但保留正确比较依据。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-101-A,ARENA-101,how many r's in strawberry,"There are **two** ""r""s in the word ""strawberry"".",4,,,,1,,,,True,字符计数错误,回答two；逐字符枚举strawberry，r位于第3、8、9位，共3个。,使用逐字符枚举或代码计数，不凭词形印象。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-101-B,ARENA-101,how many r's in strawberry,"There are 2 R's in ""strawberry"".",4,,,,1,,,,True,字符计数错误,回答2，与strawberry中3个r不符。,将字符序列与计数依据保留在结果中。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-109-A,ARENA-109,"How many instances of ""r"" are in ""strawberry""","There are 3 instances of the letter ""r"" in the word ""strawberry"".",5,,,,5,,,,False,,答案3与逐字符计数一致。,保持正确计数。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-109-B,ARENA-109,"How many instances of ""r"" are in ""strawberry""","To count the instances of ""r"" in ""strawberry"", I'll break down the word into individual letters:
+
+s-t-r-a-w-b-e-r-r-y
+
+There are 3 instances of ""r"" in the word ""strawberry"".",5,,,,5,,,,False,,列出s-t-r-a-w-b-e-r-r-y并正确得到3。,枚举依据清晰，可作为验收示例。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-112-A,ARENA-112,"Suppose you're on a gameshow, and you're given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No 1, and the host, who knows what's behind the doors, opens another door, say No 3, which has a goat. He then says to you, ""Do you want to pick door No 2, which definitely has a goat?"" Is it to your advantage to switch your choice? Keep in mind that you know the host is incapable of saying anything false.","If the host, who is incapable of lying, explicitly tells you that door No 2 ""definitely has a goat,"" then the logical course of action is not to switch your choice to door No 2. Since the host cannot lie, door No 2 must indeed have a goat behind it. This situation deviates from the standard Monty Hall problem where the host's actions typically create ambiguity intended to test whether or not you should switch based on probability.
+
+In the standard Monty Hall problem, if the host opens one of the remaining doors to reveal a goat and offers you a chance to switch, it is statistically advantageous to switch to the other unopened door because the probability that the car is behind the other unopened door is 2/3.
+
+However, in your case, since the host specifically states that door No 2 has a goat, you know with certainty that the car is behind the door you originally chose, door No 1. There is no ambiguity or probability to consider. Therefore, you should stick with your initial choice, door No 1.",5,,,,5,,,,False,,识别主持人明确保证2号门是羊，拒绝套用标准Monty Hall换门结论。,先核对变化的题设，再应用经典问题模板。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
+ARENA-112-B,ARENA-112,"Suppose you're on a gameshow, and you're given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No 1, and the host, who knows what's behind the doors, opens another door, say No 3, which has a goat. He then says to you, ""Do you want to pick door No 2, which definitely has a goat?"" Is it to your advantage to switch your choice? Keep in mind that you know the host is incapable of saying anything false.","In this situation, the host has made a specific statement that door No 2 ""definitely has a goat."" Given that the host cannot lie, this is an important piece of information.
+
+Let's break it down:
+
+1. You initially pick door No 1.
+2. The host opens door No 3, revealing a goat.
+3. The host then claims that door No 2 ""definitely has a goat.""
+
+Since the host cannot lie, door No 2 indeed has a goat. Thus, the car must be behind door No 1, the door you initially picked.
+
+Under normal Monty Hall Problem rules, it is advantageous to switch your choice because the host opens a door he knows contains a goat. However, in this modified scenario, the host explicitly tells you that door No 2 has a goat. Therefore, sticking with door No 1 is the best option, as it must contain the car given the truthful statement about door No 2.
+
+So, you should **not switch** your choice. It is to your advantage to stay with door No 1.",5,,,,5,,,,False,,根据主持人不说假话和2、3号门都有羊，推出车在1号门，推理正确。,保持对新增条件的显式使用。,Codex会话AI辅助评审历史回复,False,https://huggingface.co/datasets/lmarena-ai/arena-human-preference-100k
