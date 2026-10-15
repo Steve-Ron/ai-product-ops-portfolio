@@ -1,31 +1,28 @@
-# 许强｜数据分析作品集
+# 许强 AI 产品运营作品集
 
-面向数据分析实习生（产品／业务／商业方向）的中文作品集，展示用户反馈分类统计、产品问题诊断、大模型评测口径与样本分析。SQL、Python、Excel 技能按基础操作呈现。
+主投 AI 产品运营，侧重大模型评测、用户反馈与应用优化；数据处理与 SQL 分析支持数据运营相关岗位。
 
-在线地址：<https://steve-ron.github.io/ai-product-ops-portfolio/>
+两项均为个人项目，使用 AI 辅助实现与评审。基于 GitHub Pages 发布；本目录为2026年10月15日的作品集版本。
 
-## 核心案例
+## 已完成
 
-- **LLM Lens**：面向模型选型与版本回归的轻量评测工作台，包含 8 个评测维度、48 条待执行用例和 120 条双语人类偏好样本。
-- **Signal Desk**：面向 AI 产品团队的用户反馈聚类与需求初筛工作台，包含 156 条公开反馈、9 类主题与 3 类反馈类型。
+- Signal Desk：156条原始反馈与源链接；156条标题级AI复核；74条分类分歧；6组可复算SQL；51条快照开放记录队列。
+- LLM Lens：120组公开偏好、240条历史回复的完整性检查；12组24条回复的逐条AI评审，9条候选问题；4条确定性计数核验；48条补齐输入与验收口径的回归设计。
+- 2个交互式MVP、2份PRD、反馈与回复导出、复核记录、最新结果页与简历。
 
-## 事实边界
+## 使用
 
-两项均为个人产品项目。许强负责问题定义、产品框架、PRD、交互原型、数据分析与验证设计，并使用 AI 辅助前端实现与数据处理；项目不被描述为企业实习、商业上线或客户项目。48 条评测用例在没有真实 API 执行记录前保持“待执行”。
+直接打开 index.html 可离线浏览；新版结果位于 analysis-results.html。也可使用 Python 启动本地HTTP服务器。
 
-## 验证
+```
+python scripts/complete_evidence.py
+python -m unittest discover -s tests -p "test_*.py"
+node --test tests/workflow.test.cjs
+node scripts/validate.mjs
+```
 
-使用 Node.js 运行 `node scripts/validate.mjs`，校验公开定位、真实教育信息、新版中文简历下载、页面元数据、内部链接、数据数量、评测状态和反馈隐私字段。
+scripts/complete_evidence.py 复算并导出本次已保存的AI评审，不重新生成模型评审。review_decisions.py 和 session_llm_reviews.py 为本次Codex会话产生的决策记录。
 
-## 运行与交付
+## 结果边界
 
-- `python scripts/run_pipeline.py prepare`：从现有数据准备24条评测用例、240条历史回复评审任务。
-- `python scripts/run_pipeline.py feedback`：生成156条反馈的规则标签台账、主题统计、类型统计和图表。
-- `python scripts/build_assisted_review.py`：将已保存的6条AI辅助评审与原始回复合并，复算4条候选Bad Case并导出CSV与简要结果；此命令不重新调用模型进行评分。
-- `python -m unittest discover -s tests -p "test_*.py"`：验证数据准备、评分校验、异常留证与重试逻辑。
-- `node --test tests/workflow.test.cjs`：验证筛选导出、CSV安全处理、周报和开放问题排序。
-- 国内模型API配置、真实调用、续跑、评分导出与双人复核步骤见 [运行手册](docs/runbook.md)。`.env.example`只列配置名；密钥和原始调用日志不得提交。
-
-网站发布的是已运行的离线统计。反馈原始快照为2026年8月14日，规则标签不等于人工审核；当前真实API评分记录为0。历史模型回复保留来源，不作为本项目新调用结果。
-
-首页及两项案例的下载入口均指向数据分析岗位的一页中文 PDF 与可编辑 Word。首页以 Signal Desk 为首要案例；保留旧版文件仅作归档，不再从当前页面链接。
+公开反馈是2026年8月14日快照。标题级复核不是人工金标，74条分歧不是错误率；24条历史回复是目的抽样，不用于模型排名。48条回归设计未进行独立API实测，本轮API调用0次，无虚构成本、延迟或业务增长数字。需要用户本人复核与掌握后再用于面试。
