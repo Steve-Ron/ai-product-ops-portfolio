@@ -1,4 +1,15 @@
-# 许强 AI 产品运营作品集
+# 许强｜AI 模型评测与多模态数据标注
+
+[作品集原地址](https://steve-ron.github.io/ai-product-ops-portfolio/)
+
+- [Aesthetic Lens](aesthetic.html) · 图像与视频美学评测、A/B 和缺陷复核。
+- [Caption Studio](caption.html) · 图像与视频双语 Caption、字段检查与修订。
+- [ModelBench](modelbench.html) · 文本偏好标签、回答修订和复核后交付。
+- [LLM Lens](llm-eval.html) 与 [Signal Desk](feedback-insight.html) · 原工作台、原始证据和下载。
+
+浏览器记录保存在设备本地，发布使用 GitHub Pages 原有静态站，无需 API 密钥。预览运行 `python -m http.server 8000` 并打开 `http://127.0.0.1:8000/`。三个数据集、示范、规范与质量报告见 `downloads/career-data/`。用 `node scripts/validate.mjs` 和 `node --test tests/*.cjs` 做基础验收。
+
+## 原项目详细记录
 
 主投 AI 产品运营，侧重大模型评测、用户反馈与应用优化；数据处理与 SQL 分析支持数据运营相关岗位。
 

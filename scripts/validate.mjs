@@ -66,6 +66,9 @@ const pages = {
   'llm-eval.html': read('llm-eval.html'),
   'feedback-insight.html': read('feedback-insight.html'),
   'analysis-results.html': read('analysis-results.html'),
+  'aesthetic.html': read('aesthetic.html'),
+  'caption.html': read('caption.html'),
+  'modelbench.html': read('modelbench.html'),
 };
 
 const readme = read('README.md');
@@ -73,49 +76,21 @@ const latestSummary = readJson('downloads/evidence-20261015/summary.json');
 if (latestSummary.titleAIReviewed !== 156 || latestSummary.historicalRepliesAIReviewed !== 24 || latestSummary.candidateBadCases !== 9 || latestSummary.apiCalls !== 0) errors.push('新版结果数量或执行方式不一致');
 const allPublicCopy = `${Object.values(pages).join('\n')}\n${readme}`;
 
-requireText('首页', pages['index.html'], '<title>许强｜AI 产品运营作品集</title>');
-requireText('首页', pages['index.html'], 'AI 产品运营');
-requireText('首页', pages['index.html'], '用户反馈与应用优化');
-requireText('公开内容', allPublicCopy, 'AI 产品运营');
-requireText('首页', pages['index.html'], '北京理工大学数字经济硕士在读');
-requireText('首页', pages['index.html'], '全日制');
-requireText('首页', pages['index.html'], '成都文理学院');
-requireText('首页', pages['index.html'], '2021.09 - 2025.06');
-requireText('首页', pages['index.html'], '2026.09 - 2028.06');
-requireText('首页', pages['index.html'], '非全日制');
-requireText('首页', pages['index.html'], '书法学');
+const home = pages['index.html'];
+for (const value of ['AI 模型评测与多模态数据标注','北京理工大学','数字经济硕士在读','非全日制','成都文理学院','2026.09 — 2028.06（预计）',
+  '书法学','周末授课','工作日可全勤','9 条候选 Bad Case','Aesthetic Lens','Caption Studio','ModelBench','LLM Lens','Signal Desk']) requireText('首页',home,value);
+for (const value of ['可连续实习','拟入学']) forbidText('首页',home,value);
 forbidText('公开内容', allPublicCopy, '星智云科');
 forbidText('公开内容', allPublicCopy, '数字经济本科');
-requireText('首页', pages['index.html'], '周末授课');
-requireText('首页', pages['index.html'], '工作日可全勤 5 天');
-requireText('首页', pages['index.html'], '可连续实习 6 个月以上');
-requireText('首页', pages['index.html'], '数据提取与整理');
-requireText('首页', pages['index.html'], '分类统计与呈现');
-requireText('首页', pages['index.html'], '问题诊断与建议');
-requireText('首页', pages['index.html'], '评测口径与复核');
-requireText('首页', pages['index.html'], '识别问题');
-requireText('首页', pages['index.html'], '个人产品项目');
-
-const expectedResumeLinks = [
-  'downloads/许强-北京理工大学-AI产品运营.pdf',
-  'downloads/许强-北京理工大学-AI产品运营.docx',
-];
-for (const resumeLink of expectedResumeLinks) {
-  requireText('首页', pages['index.html'], resumeLink);
-  if (!fs.existsSync(path.join(root, resumeLink))) errors.push(`缺少最新简历：${resumeLink}`);
-}
+const resume = 'downloads/许强-AI模型评测与多模态数据标注-简历.pdf';
+requireText('首页',home,resume);
+read(resume);
 
 forbidText('公开内容', allPublicCopy, '拟入学');
-const applicationHeadline = pages['index.html'].match(/<h1>[\s\S]*?<\/h1>/)?.[0] || '';
-requireText('求职定位', applicationHeadline, 'AI 产品运营');
-forbidText('求职定位', applicationHeadline, 'AI 产品经理实习生');
-requireText('公开内容', allPublicCopy, 'AI Product Ops Portfolio');
 forbidText('公开内容', allPublicCopy, '许强-AI产品运营实习简历.pdf');
 forbidText('公开内容', allPublicCopy, 'resume.pdf');
-requireText('README', readme, 'AI 产品运营');
+requireText('README', readme, 'AI 模型评测与多模态数据标注');
 
-forbidText('首页', pages['index.html'], '识别 4 条候选 Bad Case');
-requireText('首页', pages['index.html'], '识别 9 条候选 Bad Case');
 const llm = pages['llm-eval.html'];
 for (const expected of [
   '招聘官摘要',
@@ -196,7 +171,7 @@ if (errors.length) {
 checks.push(
   '招聘定位与在读状态一致',
   '项目职责与真实性边界完整',
-  '中文PDF与Word简历链接有效',
+  '最新单页简历链接有效',
   '页面元数据与本地链接有效',
   '数据数量与状态真实',
   '公开反馈隐私字段已最小化',

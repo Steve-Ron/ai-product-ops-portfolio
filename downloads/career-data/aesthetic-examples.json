@@ -1,0 +1,43 @@
+[
+  {
+    "sample_id": "DB-e76138ca-7832-4e17-a637-4c3388819814",
+    "compare": "DB-e68ccbf5-c8a9-4f0c-9aed-d71f535f2618",
+    "scores": {
+      "画面清晰度": 1,
+      "主体结构": 1,
+      "Prompt符合度": 1
+    },
+    "choice": "B",
+    "error_tags": [
+      "模糊或伪影",
+      "Prompt偏离"
+    ],
+    "evidence": "左图主体区域呈边缘不清的亮色块，无法辨认角色轮廓。逐图检查角色和环境是否可见。",
+    "record_origin": "codex_assisted_example",
+    "review_status": "pending_candidate_review"
+  },
+  {
+    "sample_id": "CMA-162868",
+    "scores": {
+      "构图合理性": 4,
+      "视觉层次": 4,
+      "文字与书法": 4
+    },
+    "error_tags": [],
+    "evidence": "墨字纵向排列，墨色与纸面形成对比。浓淡和连笔是可观察的风格特征，草书字义需另核。",
+    "record_origin": "codex_assisted_example",
+    "review_status": "pending_candidate_review"
+  },
+  {
+    "sample_id": "VID-sintel-4",
+    "scores": {
+      "构图合理性": 4,
+      "风格一致性": 4,
+      "视觉层次": 4
+    },
+    "error_tags": [],
+    "evidence": "预览帧中连绵的沙丘呈暖色，明暗带形成多层轮廓。预览帧只支持空间和画面判断，先留空时序与运动。",
+    "record_origin": "codex_assisted_example",
+    "review_status": "pending_candidate_review"
+  }
+]

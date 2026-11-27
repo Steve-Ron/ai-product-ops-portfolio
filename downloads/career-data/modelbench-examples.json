@@ -1,0 +1,63 @@
+[
+  {
+    "sample_id": "UF-00095",
+    "choice": "A",
+    "scores_a": {
+      "事实准确性": 5,
+      "逻辑完整性": 5,
+      "回答完整性": 4
+    },
+    "scores_b": {
+      "事实准确性": 1,
+      "逻辑完整性": 1,
+      "回答完整性": 2
+    },
+    "error_tags": [
+      "事实错误",
+      "推理跳步"
+    ],
+    "evidence": "B 把 (1+2+3+4+5)/5 写成 16，正确为 3。平方偏差之和 10。A 按总体公式得 √2。题目未指定样本/总体。",
+    "revised": "The mean is 3 and the sum of squared deviations is 10. The population standard deviation is √(10/5) ≈ 1.4142. If the values are a sample, the sample standard deviation is √(10/4) ≈ 1.5811.",
+    "record_origin": "codex_assisted_example",
+    "review_status": "pending_candidate_review"
+  },
+  {
+    "sample_id": "UF-00147",
+    "choice": "A",
+    "scores_a": {
+      "指令遵循": 5,
+      "回答完整性": 5,
+      "事实准确性": 4
+    },
+    "scores_b": {
+      "指令遵循": 5,
+      "回答完整性": 3,
+      "事实准确性": 3
+    },
+    "error_tags": [
+      "内容遗漏"
+    ],
+    "evidence": "按题内原文审核摘要。B 省略人名，将“18 世纪之前”模糊成 prior to that。原文自身历史陈述未经独立核验。",
+    "revised": "The passage traces the modern oil industry to shale-oil refining in Romania in 1857 and credits Petrache Poenaru. It states that wooden drills were the main method of producing oil before the 18th century.",
+    "record_origin": "codex_assisted_example",
+    "review_status": "pending_candidate_review"
+  },
+  {
+    "sample_id": "CA-00086",
+    "choice": "tie",
+    "scores_a": {
+      "指令遵循": 5,
+      "内容相关性": 4,
+      "表达清晰度": 4
+    },
+    "scores_b": {
+      "指令遵循": 5,
+      "内容相关性": 4,
+      "表达清晰度": 4
+    },
+    "error_tags": [],
+    "evidence": "A、B 都建议角落书桌或紧凑矩形书桌，都不再推荐壁挂式。尺寸是建议。偏好取决于房间面积及家具尺寸，保留平局。",
+    "record_origin": "codex_assisted_example",
+    "review_status": "pending_candidate_review"
+  }
+]

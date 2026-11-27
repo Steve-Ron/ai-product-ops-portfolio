@@ -1,0 +1,48 @@
+[
+  {
+    "sample_id": "CMA-162868",
+    "before": {
+      "caption_zh": "作者在纸上练习写字。",
+      "caption_en": "The artist is practising writing on paper."
+    },
+    "after": {
+      "caption_zh": "浅色纸上有多列黑色竖书，笔画粗细和墨色深浅有变化。",
+      "caption_en": "Several vertical columns of black calligraphy appear on the light paper, with variations in stroke width and ink density.",
+      "objects": "纸面、黑色书迹",
+      "actions": "不适用（静态原作）",
+      "spatial_relations": "竖书按列排列在纸面上",
+      "quality_score": 4
+    },
+    "error_tags": [
+      "无依据推断",
+      "描述不完整"
+    ],
+    "review_note": "图中没有书写者及其动作，删去练习的动机推断。",
+    "record_origin": "codex_assisted_example",
+    "review_status": "pending_candidate_review"
+  },
+  {
+    "sample_id": "VID-sintel-4",
+    "before": {
+      "caption_zh": "旅行者走向沙漠并说话。",
+      "caption_en": "A traveller walks into the desert and speaks."
+    },
+    "after": {
+      "caption_zh": "暖黄色的沙丘占据画面，起伏的丘脊延向远处。",
+      "caption_en": "Warm yellow dunes fill the frame, with undulating ridges extending into the distance.",
+      "objects": "沙丘、丘脊",
+      "actions": "沙丘预览帧无可确认的人物动作",
+      "spatial_relations": "丘脊由前景向远处延伸",
+      "time_sequence": "当前只确认片内 1 秒预览帧，完整片段待复核。",
+      "quality_score": 3
+    },
+    "error_tags": [
+      "无依据推断",
+      "错误动作",
+      "视频时序错误"
+    ],
+    "review_note": "去掉画面和静音素材无法验证的说话，完整时序待本人逐帧补写。",
+    "record_origin": "codex_assisted_example",
+    "review_status": "pending_candidate_review"
+  }
+]
